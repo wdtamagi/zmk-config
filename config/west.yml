@@ -1,13 +1,16 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    # Additional modules containing boards/shields/custom code can be listed here as well
-    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
+    - name: wdtamagi
+      url-base: https://github.com/wdtamagi
+    - name: charlesmst
+      url-base: https://github.com/charlesmst
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: main
+      remote: wdtamagi
+      revision: feat/pointers-move-scroll
       import: app/west.yml
+    - name: zmk-pmw3610-driver
+      remote: charlesmst
+      revision: main
   self:
     path: config

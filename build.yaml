@@ -19,6 +19,8 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: corne_left
+    shield: egrof_left
   - board: nice_nano_v2
-    shield: corne_right
+    shield: egrof_right
+  - board: nice_nano_v2
+    shield: egrof_dongle
