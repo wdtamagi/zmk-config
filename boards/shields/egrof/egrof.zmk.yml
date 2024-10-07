@@ -1,0 +1,12 @@
+file_format: "1"
+id: egrof
+name: Egrof
+type: shield
+url: https://github.com/wdtamagi
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - egrof_left
+  - egrof_right
+  - egrof_dongle

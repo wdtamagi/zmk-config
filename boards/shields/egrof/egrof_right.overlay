@@ -1,5 +1,6 @@
 #include "egrof.dtsi"
 #include "egrof_3610.dtsi"
+#include "egrof_nview.dtsi"
 
 &default_transform {
 	col-offset = <4>;
