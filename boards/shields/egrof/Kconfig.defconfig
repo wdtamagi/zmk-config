@@ -1,0 +1,16 @@
+if SHIELD_CHARYBDIS_DONGLE
+
+config ZMK_KEYBOARD_NAME
+	default "Egrof"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+	default y
+
+endif
+
+if SHIELD_EGROF_DONGLE || SHIELD_EGROF_LEFT || SHIELD_EGROF_RIGHT
+
+config ZMK_SPLIT
+	default y
+	
+endif
