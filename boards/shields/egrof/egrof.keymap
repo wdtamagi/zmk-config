@@ -72,42 +72,42 @@
         Base {
             label = "Base";
             bindings = <
-&mo2       &kp COMMA  &kp DOT  &kp SPACE    &kp A    &kp L   &kp Y     &kp RSHIFT
-&mo4       &kp LCTRL  &kp BSPC &kp BSPC     &kp RET  &kp TAB &kp RCTRL &trans
-&mo1       &kp U      &kp O    &kp E        &kp T    &kp N   &kp S     &mo1
-&kp RSHIFT &kp APOS   &kp I    &kp R        &trans   &kp J   &kp SEMI  &mo2
-&trans     &trans     &kp M    &kp G        &kp B    &kp F   &trans    &kp LEFT
-&trans     &trans     &kp V    &kp ESC      &kp X    &kp P   &trans    &kp UP
-&trans     &trans     &kp C    &kp Z        &kp Q    &kp D   &trans    &kp DOWN
-&trans     &trans     &kp K    &kp W        &kp RGUI &kp H   &trans    &kp RIGHT
+&mo 2       &kp COMMA  &kp DOT  &kp SPACE    &kp A    &kp L   &kp Y     &kp RSHIFT
+&mo 4       &kp LCTRL  &kp BSPC &kp BSPC     &kp RET  &kp TAB &kp RCTRL &trans
+&mo 1       &kp U      &kp O    &kp E        &kp T    &kp N   &kp S     &mo 1
+&kp RSHIFT  &kp APOS   &kp I    &kp R        &trans   &kp J   &kp SEMI  &mo 2
+&trans      &trans     &kp M    &kp G        &kp B    &kp F   &trans    &kp LEFT
+&trans      &trans     &kp V    &kp ESC      &kp X    &kp P   &trans    &kp UP
+&trans      &trans     &kp C    &kp Z        &kp Q    &kp D   &trans    &kp DOWN
+&trans      &trans     &kp K    &kp W        &kp RGUI &kp H   &trans    &kp RIGHT
             >;
         };
 
         Lower {
             label = "Lower";
             bindings = <
-&mo1       &kp COMMA  &kp DOT  &kp SPACE    &kp A    &kp L   &kp Y     &kp RSHIFT
-&mo4       &kp LCTRL  &kp BSPC &kp BSPC     &kp RET  &kp TAB &kp RCTRL &trans
-&mo2       &kp U      &kp O    &kp E        &kp T    &kp N   &kp S     &mo2
-&kp RSHIFT &kp APOS   &kp I    &kp R        &trans   &kp J   &kp SEMI  &mo1
-&trans     &trans     &kp M    &kp G        &kp B    &kp F   &trans    &kp LEFT
-&trans     &trans     &kp V    &kp ESC      &kp X    &kp P   &trans    &kp UP
-&trans     &trans     &kp C    &kp Z        &kp Q    &kp D   &trans    &kp DOWN
-&trans     &trans     &kp K    &kp W        &kp RGUI &kp H   &trans    &kp RIGHT
+&mo 1       &kp COMMA  &kp DOT  &kp SPACE    &kp A    &kp L   &kp Y     &kp RSHIFT
+&mo 4       &kp LCTRL  &kp BSPC &kp BSPC     &kp RET  &kp TAB &kp RCTRL &trans
+&mo 2       &kp U      &kp O    &kp E        &kp T    &kp N   &kp S     &mo 2
+&kp RSHIFT  &kp APOS   &kp I    &kp R        &trans   &kp J   &kp SEMI  &mo 1
+&trans      &trans     &kp M    &kp G        &kp B    &kp F   &trans    &kp LEFT
+&trans      &trans     &kp V    &kp ESC      &kp X    &kp P   &trans    &kp UP
+&trans      &trans     &kp C    &kp Z        &kp Q    &kp D   &trans    &kp DOWN
+&trans      &trans     &kp K    &kp W        &kp RGUI &kp H   &trans    &kp RIGHT
             >;
         };
 
         Raise {
             label = "Raise";
             bindings = <
-&mo1       &kp EQUAL  &kp CARET  &kp AMPS      &kp N4    &kp N8     &kp EQUAL  &kp RSHIFT
-&mo4       &kp AT     &kp PLUS   &kp DLLR      &kp N1    &kp N5     &kp N9     &trans
-&mo2       &kp EXCL   &kp PRCNT  &kp HASH      &kp N3    &kp N7     &kp QMARK  &mo2
-&kp RSHIFT &kp GRAVE  &kp TILDE  &kp STAR      &kp N2    &kp N6     &kp N0     &mo1
-&trans     &trans     &kp LBRC   &kp UNDER     &kp FSLH  &kp LPAR   &trans     &kp LEFT
-&trans     &trans     &kp LT     &kp PLUS      &kp PIPE  &kp LBKT   &trans     &kp UP
-&trans     &trans     &kp GT     &trans        &trans    &kp RBKT   &trans     &kp DOWN
-&trans     &trans     &kp RBRC   &kp MINUS     &kp NUBS  &kp RPAR   &trans     &kp RIGHT
+&mo 1       &kp EQUAL  &kp CARET  &kp AMPS      &kp N4    &kp N8     &kp EQUAL  &kp RSHIFT
+&mo 4       &kp AT     &kp PLUS   &kp DLLR      &kp N1    &kp N5     &kp N9     &trans
+&mo 2       &kp EXCL   &kp PRCNT  &kp HASH      &kp N3    &kp N7     &kp QMARK  &mo 2
+&kp RSHIFT  &kp GRAVE  &kp TILDE  &kp STAR      &kp N2    &kp N6     &kp N0     &mo 1
+&trans      &trans     &kp LBRC   &kp UNDER     &kp FSLH  &kp LPAR   &trans     &kp LEFT
+&trans      &trans     &kp LT     &kp PLUS      &kp PIPE  &kp LBKT   &trans     &kp UP
+&trans      &trans     &kp GT     &trans        &trans    &kp RBKT   &trans     &kp DOWN
+&trans      /&trans     &kp RBRC   &kp MINUS     &kp NUBS  &kp RPAR   &trans     &kp RIGHT
             >;
         };
 
