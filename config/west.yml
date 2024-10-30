@@ -9,6 +9,9 @@ manifest:
       remote: wdtamagi
       revision: feat/pointers-move-scroll
       import: app/west.yml
+    - name: nice-view-gem
+      remote: m165437
+      revision: main
     - name: zmk-pmw3610-driver
       remote: badjeff
       revision: main
