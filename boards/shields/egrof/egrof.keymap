@@ -107,7 +107,7 @@
 &trans      &trans     &kp LBRC   &kp UNDER     &kp FSLH  &kp LPAR   &trans     &kp LEFT
 &trans      &trans     &kp LT     &kp PLUS      &kp PIPE  &kp LBKT   &trans     &kp UP
 &trans      &trans     &kp GT     &trans        &trans    &kp RBKT   &trans     &kp DOWN
-&trans      /&trans     &kp RBRC   &kp MINUS     &kp NUBS  &kp RPAR   &trans     &kp RIGHT
+&trans      &trans     &kp RBRC   &kp MINUS     &kp NUBS  &kp RPAR   &trans     &kp RIGHT
             >;
         };
 
