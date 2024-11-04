@@ -72,14 +72,21 @@
         Base {
             label = "Base";
             bindings = <
-&mo 2       &kp COMMA  &kp DOT  &kp SPACE    &kp A    &kp L   &kp Y     &kp RSHIFT
-&mo 4       &kp LCTRL  &kp BSPC &kp BSPC     &kp RET  &kp TAB &kp RCTRL &trans
-&mo 1       &kp U      &kp O    &kp E        &kp T    &kp N   &kp S     &mo 1
-&kp RSHIFT  &kp APOS   &kp I    &kp R        &trans   &kp J   &kp SEMI  &mo 2
-&trans      &trans     &kp M    &kp G        &kp B    &kp F   &trans    &kp LEFT
-&trans      &trans     &kp V    &kp ESC      &kp X    &kp P   &trans    &kp UP
-&trans      &trans     &kp C    &kp Z        &kp Q    &kp D   &trans    &kp DOWN
-&trans      &trans     &kp K    &kp W        &kp RGUI &kp H   &trans    &kp RIGHT
+    &mo 4                   &kp LCTRL               &kp DEL              &kp BSPC                 &kp RET              &kp TAB              &kp RCTRL                   &trans           
+&mo 2   &kp LSHIFT  &kp COMMA       &kp APOS  &kp DOT     &kp I  &kp SPACE     &kp R          &kp A     &kp SPACE  &kp L     &kp J   &kp Y          &kp SEMI   &kp RSHIFT     &mo 2
+	&mo 1                   &kp U                   &kp O                &kp E                    &kp T                &kp N                &kp S                       &mo 1      
+
+                            &trans                  &trans                                                             &trans               &kp UP                          
+	                &trans          &trans    &trans      &trans                                                   &trans    &trans  &kp LEFT       &kp RIGHT  
+	                        &trans                  &trans                                                             &trans               &kp DOWN                    
+
+                                                                         &kp V                    &kp P                                     
+	                                                             &kp M         &kp K          &kp F     &kp H   
+	                                                                     &kp C                    &kp D                        
+
+                                                                         &trans                   &kp X                                     
+	                                                             &kp G         &kp W          &kp B     &trans   
+	                                                                     &kp Z                    &kp Q                        
             >;
         };
 
