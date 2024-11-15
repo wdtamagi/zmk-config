@@ -66,41 +66,89 @@
         };
     };
 
+    macros {
+        m_copy: m_copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        m_paste: m_paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp V>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        m_mcontrol: m_mcontrol {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp UP>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        m_printscr: m_printscr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LSHIFT>
+                , <&macro_tap &kp N5>
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp LSHIFT>
+                ;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         Base {
             label = "Base";
             bindings = <
-    &mo 4                   &kp LCTRL               &kp DEL              &kp BSPC                 &kp RET              &kp TAB              &kp RCTRL                   &trans           
-&mo 2   &kp LSHIFT  &kp COMMA       &kp APOS  &kp DOT     &kp I  &kp SPACE     &kp R          &kp A     &kp SPACE  &kp L     &kp J   &kp Y          &kp SEMI   &kp RSHIFT     &mo 2
-	&mo 1                   &kp U                   &kp O                &kp E                    &kp T                &kp N                &kp S                       &mo 1      
+    &mo 4                   &kp LCTRL               &kp DEL              &kp BSPC                 &kp RET                &kp TAB                &mkp LCLK                   &mkp RCLK           
+&mo 1   &sk LSHIFT  &kp COMMA       &kp APOS  &kp DOT     &kp I  &kp SPACE     &kp R          &kp A     &kp SPACE    &kp L       &kp J      &kp Y      &kp SEMI    &sk RSHIFT       &mo 1
+	&mo 2                   &kp U                   &kp O                &kp E                    &kp T                  &kp N                  &kp S                       &mo 2      
 
-                            &trans                  &trans                                                             &trans               &kp UP                          
-	                &trans          &trans    &trans      &trans                                                   &trans    &trans  &kp LEFT       &kp RIGHT  
-	                        &trans                  &trans                                                             &trans               &kp DOWN                    
+                            &trans                  &m_paste                                                             &kp F12                &kp UP                          
+	                   &trans    &trans        &trans    &m_printscr                                           &m_mcontrol      &trans   &kp LEFT      &kp RIGHT  
+	                        &trans                  &m_copy                                                              &kp RGUI               &kp DOWN                    
 
                                                                          &kp V                    &kp P                                     
-	                                                             &kp M         &kp K          &kp F     &kp H   
+	                                                                 &kp M   &kp K            &kp F   &kp H   
 	                                                                     &kp C                    &kp D                        
 
                                                                          &kp ESC                  &kp X                                     
-	                                                             &kp G         &kp W          &kp B     &trans   
+	                                                                 &kp G     &kp W          &kp B   &key_repeat   
 	                                                                     &kp Z                    &kp Q                        
             >;
         };
 
-        Lower {
-            label = "Lower";
+        Symbol {
+            label = "Symbol";
             bindings = <
-&mo 1       &kp COMMA  &kp DOT  &kp SPACE    &kp A    &kp L   &kp Y     &kp RSHIFT
-&mo 4       &kp LCTRL  &kp BSPC &kp BSPC     &kp RET  &kp TAB &kp RCTRL &trans
-&mo 2       &kp U      &kp O    &kp E        &kp T    &kp N   &kp S     &mo 2
-&kp RSHIFT  &kp APOS   &kp I    &kp R        &trans   &kp J   &kp SEMI  &mo 1
-&trans      &trans     &kp M    &kp G        &kp B    &kp F   &trans    &kp LEFT
-&trans      &trans     &kp V    &kp ESC      &kp X    &kp P   &trans    &kp UP
-&trans      &trans     &kp C    &kp Z        &kp Q    &kp D   &trans    &kp DOWN
-&trans      &trans     &kp K    &kp W        &kp RGUI &kp H   &trans    &kp RIGHT
+    &mo 4                   &kp AT                    &kp PLUS                  &kp DLLR                      &kp N1              &kp N5               &kp N9                     &mkp RCLK           
+&mo 2   &caps_word  &kp EQUAL      &kp GRAVE  &kp CARET       &kp TILDE  &kp AMPS      &kp STAR          &kp N4     &kp N2   &kp N8    &kp N6   &kp EQUAL     &kp N0     &caps_word       &mo 2
+	&mo 1                   &kp EXCL                  &kp PRCNT                 &kp HASH                      &kp N3              &kp N7               &kp QMARK                  &mo 1      
+
+                            &trans                    &trans                                                                      &trans               &kp UP                          
+	                   &trans    &trans          &trans    &trans                                                            &trans    &trans   &kp LEFT      &kp RIGHT  
+	                        &trans                    &trans                                                                      &trans               &kp DOWN                    
+
+                                                                                &kp LT                        &kp PIPE                                     
+	                                                                     &kp LBRC    &kp RBRC          &kp FSLH      &kp NUBS   
+	                                                                            &kp GT                        &trans                        
+
+                                                                                &kp ESC                       &kp LBKT                                     
+	                                                                    &kp UNDER     &kp MINUS        &kp LPAR      &RPAR   
+	                                                                            &trans                        &kp RBKT                        
             >;
         };
 
