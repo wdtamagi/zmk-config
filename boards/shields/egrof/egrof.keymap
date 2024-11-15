@@ -147,7 +147,7 @@
 	                                                                            &kp GT                        &trans                        
 
                                                                                 &kp ESC                       &kp LBKT                                     
-	                                                                    &kp UNDER     &kp MINUS        &kp LPAR      &RPAR   
+	                                                                    &kp UNDER     &kp MINUS        &kp LPAR      &kp RPAR   
 	                                                                            &trans                        &kp RBKT                        
             >;
         };
