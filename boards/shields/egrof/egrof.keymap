@@ -84,7 +84,7 @@
 	                                                             &kp M         &kp K          &kp F     &kp H   
 	                                                                     &kp C                    &kp D                        
 
-                                                                         &trans                   &kp X                                     
+                                                                         &kp ESC                  &kp X                                     
 	                                                             &kp G         &kp W          &kp B     &trans   
 	                                                                     &kp Z                    &kp Q                        
             >;
