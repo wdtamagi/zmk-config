@@ -1,6 +1,6 @@
-#include "egrof.dtsi"
-#include "egrof_3610.dtsi"
-#include "egrof_nview.dtsi"
+#include "falkor.dtsi"
+#include "falkor_3610.dtsi"
+#include "falkor_nview.dtsi"
 
 &kscan0 {
 	compatible = "zmk,kscan-gpio-matrix";

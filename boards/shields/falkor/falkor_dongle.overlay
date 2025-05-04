@@ -1,4 +1,4 @@
-#include "egrof.dtsi"
+#include "falkor.dtsi"
 
 / {
     chosen {
