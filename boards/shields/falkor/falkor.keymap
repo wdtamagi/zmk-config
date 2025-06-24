@@ -113,13 +113,13 @@
         Base {
             label = "Base";
             bindings = <
-    &mo 4                   &kp LCTRL               &kp DEL              &kp BSPC                 &kp RET                &kp TAB                &mkp LCLK                   &mkp RCLK           
-&mo 1   &sk LSHIFT  &kp COMMA       &kp APOS  &kp DOT     &kp I  &kp SPACE     &kp R          &kp A     &kp SPACE    &kp L       &kp J      &kp Y      &kp SEMI    &sk RSHIFT       &mo 1
-	&mo 2                   &kp U                   &kp O                &kp E                    &kp T                  &kp N                  &kp S                       &mo 2      
+    &kp N1                   &kp LCTRL               &kp DEL              &kp BSPC                 &kp RET                &kp TAB                &mkp LCLK                   &kp N1           
+&kp N2   &sk LSHIFT  &kp COMMA       &kp APOS  &kp DOT     &kp I  &kp SPACE     &kp R          &kp A     &kp SPACE    &kp L       &kp J      &kp Y      &kp SEMI    &sk RSHIFT       &kp N2
+	&kp N3                   &kp U                   &kp O                &kp E                    &kp T                  &kp N                  &kp S                       &kp N3      
 
-                            &trans                  &m_paste                                                             &kp F12                &kp UP                          
-	                   &trans    &trans        &trans    &m_printscr                                           &m_mcontrol      &trans   &kp LEFT      &kp RIGHT  
-	                        &trans                  &m_copy                                                              &kp RGUI               &kp DOWN                    
+                            &kp N1                  &kp N1                                                             &kp F12                &kp UP                          
+	                   &kp N4    &kp N2        &kp N4    &kp N2                                           &m_mcontrol      &trans   &kp LEFT      &kp RIGHT  
+	                        &kp N3                  &kp N3                                                              &kp RGUI               &kp DOWN                    
 
                                                                          &kp V                    &kp P                                     
 	                                                                 &kp M   &kp K            &kp F   &kp H   
