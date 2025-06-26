@@ -37,4 +37,7 @@
       ;
 };
 
-&tball_split { status = "disabled"; };
+#include <input/processors/report_rate_limit.dtsi>
+#include <input/processors/xyz.dtsi>
+
+&tball_split { device = <&tball>; input-processors = <&zip_report_rate_limit 4>, <&zip_xyz>; };
