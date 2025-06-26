@@ -1,6 +1,6 @@
 #include "falkor.dtsi"
 /* #include "falkor_3610.dtsi" */
-/* #include "falkor_nview.dtsi" */
+#include "falkor_nview.dtsi"
 
 &kscan0 {
 	compatible = "zmk,kscan-gpio-matrix";

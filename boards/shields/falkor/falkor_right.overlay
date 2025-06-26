@@ -1,7 +1,7 @@
 #include "falkor.dtsi"
 #include "falkor_3610.dtsi"
 #include "falkor_zplit.dtsi"
-/* #include "falkor_nview.dtsi" */
+#include "falkor_nview.dtsi"
 
 &default_transform {
 	col-offset = <4>;
