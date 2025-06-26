@@ -67,7 +67,7 @@
     tracball_mmv_il {
         compatible = "zmk,input-listener";
         device = <&tball_split>;
-        input-processors = <&xy_scaler 6 5>;//, <&zip_report_rate_limit 8>;
+        input-processors = <&zip_zxy>, <&xy_scaler 6 5>;
         precise {
             layers = <NUM>;
             process-next;
@@ -77,7 +77,7 @@
             layers = <MSC>;
             process-next;
             input-processors = <&xy_transf (INPUT_TRANSFORM_Y_INVERT)>
-                             , <&xy_scaler 1 6>, <&x_scaler 0 1>
+                             , <&xy_scaler 1 55>, <&x_scaler 0 1>
                              , <&to_wheel>;
         };
     };
