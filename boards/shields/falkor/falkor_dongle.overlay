@@ -35,3 +35,6 @@
       , <&gpio1 6 GPIO_ACTIVE_HIGH>
       ;
 };
+
+
+&tball_split { status = "disabled"; };
