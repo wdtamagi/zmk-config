@@ -15,10 +15,19 @@ manifest:
     - name: zmk-pmw3610-driver
       remote: wdtamagi
       revision: main
-    - name: zmk-split-peripheral-input-relay
+    - name: zmk-behavior-mouse-key-toggle
       remote: badjeff
       revision: main
-    - name: zmk-input-behavior-listener
+    - name: zmk-output-behavior-listener
+      remote: badjeff
+      revision: main
+    - name: zmk-input-processor-mixer
+      remote: badjeff
+      revision: main
+    - name: zmk-input-processor-report-rate-limit
+      remote: badjeff
+      revision: main
+    - name: zmk-input-processor-xyz
       remote: badjeff
       revision: main
   self:

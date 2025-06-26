@@ -17,22 +17,9 @@
       ;
 };
 
-&spi0 {
-    status = "okay";
-};
+#include <input/processors/report_rate_limit.dtsi>
+#include <input/processors/xyz.dtsi>
 
-&trackball {
-    status = "okay";
-};
-
-/ {
-	vtrackball: virtual_input_trackball {
-		compatible = "zmk,virtual-input";
-	};
-
-	input_relay_config_trackball {
-		compatible = "zmk,split-peripheral-input-relay";
-		device = <&trackball>;
-		relay-channel = <102>;
-	};
-};
+#include "falkor_3610.dtsi"
+#include "falkor_zplit.dtsi"
+&tball_split { device = <&tball>; input-processors = <&zip_report_rate_limit 4>, <&zip_xyz>; };

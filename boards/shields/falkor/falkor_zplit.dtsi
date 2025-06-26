@@ -1,0 +1,8 @@
+/{
+  split_inputs {
+    #address-cells = <1>;
+    #size-cells = <0>;
+
+    tball_split: tball@0 { compatible = "zmk,input-split"; reg = <0>; };
+  };
+};
