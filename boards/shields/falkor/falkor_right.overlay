@@ -18,6 +18,13 @@
       ;
 };
 
+/ {
+  tball_listener {
+    status = "okay";
+    device = <&tball>;
+  };
+};
+
 #include <input/processors/report_rate_limit.dtsi>
 #include <input/processors/xyz.dtsi>
 
