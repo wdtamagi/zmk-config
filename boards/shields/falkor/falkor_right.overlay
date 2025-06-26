@@ -1,6 +1,7 @@
 #include "falkor.dtsi"
 #include "falkor_3610.dtsi"
-#include "falkor_nview.dtsi"
+#include "falkor_zplit.dtsi"
+/* #include "falkor_nview.dtsi" */
 
 &default_transform {
 	col-offset = <4>;
@@ -20,6 +21,4 @@
 #include <input/processors/report_rate_limit.dtsi>
 #include <input/processors/xyz.dtsi>
 
-#include "falkor_3610.dtsi"
-#include "falkor_zplit.dtsi"
 &tball_split { device = <&tball>; input-processors = <&zip_report_rate_limit 4>, <&zip_xyz>; };
