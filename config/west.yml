@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: wdtamagi
-      revision: feat/pointers-move-scroll
+      revision: main
       import: app/west.yml
     - name: nice-view-gem
       remote: wdtamagi
