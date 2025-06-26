@@ -81,52 +81,6 @@
                              , <&to_wheel>;
         };
     };
-    /* trackball_listener { */
-    /*     compatible = "zmk,input-behavior-listener"; */
-    /*     device = <&vtrackball>; */
-    /*     layers = <0 2 3 4 5>; */
-    /*     evt-type = <INPUT_EV_REL>; */
-    /*     x-input-code = <INPUT_REL_X>; */
-    /*     y-input-code = <INPUT_REL_Y>; */
-    /*     scale-multiplier = <1>; */
-    /*     scale-divisor = <4>; */
-    /*     bindings = <&ib_toggle_layer 5>; */
-    /* }; */
-    /**/
-    /* trackball_snipe_listener { */
-    /*     compatible = "zmk,input-behavior-listener";    */
-    /*     device = <&vtrackball>; */
-    /*     layers = <>; */
-    /*     evt-type = <INPUT_EV_REL>; */
-    /*     x-input-code = <INPUT_REL_X>; */
-    /*     y-input-code = <INPUT_REL_Y>; */
-    /*     scale-multiplier = <1>; */
-    /*     scale-divisor = <12>; */
-    /* }; */
-    /**/
-    /* trackball_scroll_listener { */
-    /*     compatible = "zmk,input-behavior-listener"; */
-    /*     device = <&vtrackball>; */
-    /*     layers = <1>; */
-    /*     evt-type = <INPUT_EV_REL>;             */
-    /*     x-input-code = <INPUT_REL_MISC>; */
-    /*     y-input-code = <INPUT_REL_WHEEL>; */
-    /*     y-invert; */
-    /*     bindings = <&ib_wheel_scaler 1 16>; */
-    /* }; */
-    /**/
-    /* ib_wheel_scaler: ib_wheel_scaler { */
-    /*     compatible = "zmk,input-behavior-scaler"; */
-    /*     #binding-cells = <2>; */
-    /*     evt-type = <INPUT_EV_REL>; */
-    /*     input-code = <INPUT_REL_WHEEL>; */
-    /* }; */
-    /**/
-    /* ib_toggle_layer: ib_toggle_layer { */
-    /*     compatible = "zmk,input-behavior-tog-layer"; */
-    /*     #binding-cells = <1>; */
-    /*     time-to-live-ms = <750>; */
-    /* }; */
 
     behaviors {
                 ht: hold_tap_mods {
@@ -258,9 +212,9 @@
         BAS_layer {
             display-name = "Base";
             bindings = <
-    &kp N1                   &kp LCTRL               &kp DEL              &kp BSPC                 &kp RET                &kp TAB                &mkp LCLK                   &kp N1           
-&kp N2   &sk LSHIFT  &kp COMMA       &kp APOS  &kp DOT     &kp I  &kp SPACE     &kp R          &kp A     &kp SPACE    &kp L       &kp J      &kp Y      &kp SEMI    &sk RSHIFT       &kp N2
-	&kp N3                   &kp U                   &kp O                &kp E                    &kp T                  &kp N                  &kp S                       &kp N3      
+    &trans                  &kp LCTRL               &kp DEL              &kp BSPC                 &kp RET                &kp TAB                &mkp LCLK                   &trans           
+&mo NUM   &sk LSHIFT  &kp COMMA       &kp APOS  &kp DOT     &kp I  &kp SPACE     &kp R          &kp A     &kp SPACE    &kp L       &kp J      &kp Y      &kp SEMI    &sk RSHIFT       &mo NUM
+	&mo MSC                   &kp U                   &kp O                &kp E                    &kp T                  &kp N                  &kp S                       &mo MSC      
 
                             &kp N1                  &kp N1                                                             &kp F12                &kp UP                          
 	                   &kp N4    &kp N2        &kp N4    &kp N2                                           &m_mcontrol      &trans   &kp LEFT      &kp RIGHT  
@@ -279,9 +233,9 @@
         NUM_layer {
             display-name = "Num";
             bindings = <
-    &mo 4                   &kp AT                    &kp PLUS                  &kp DLLR                      &kp N1              &kp N5               &kp N9                     &mkp RCLK           
-&mo 2   &caps_word  &kp EQUAL      &kp GRAVE  &kp CARET       &kp TILDE  &kp AMPS      &kp STAR          &kp N4     &kp N2   &kp N8    &kp N6   &kp EQUAL     &kp N0     &caps_word       &mo 2
-	&mo 1                   &kp EXCL                  &kp PRCNT                 &kp HASH                      &kp N3              &kp N7               &kp QMARK                  &mo 1      
+    &trans                   &kp AT                    &kp PLUS                  &kp DLLR                      &kp N1              &kp N5               &kp N9                     &mkp RCLK           
+&trans   &caps_word  &kp EQUAL      &kp GRAVE  &kp CARET       &kp TILDE  &kp AMPS      &kp STAR          &kp N4     &kp N2   &kp N8    &kp N6   &kp EQUAL     &kp N0     &caps_word       &trans
+	&mo MSC                   &kp EXCL                  &kp PRCNT                 &kp HASH                      &kp N3              &kp N7               &kp QMARK                  &mo MSC      
 
                             &trans                    &trans                                                                      &trans               &kp UP                          
 	                   &trans    &trans          &trans    &trans                                                            &trans    &trans   &kp LEFT      &kp RIGHT  
@@ -300,10 +254,10 @@
         MSC_layer {
             label = "Msc";
             bindings = <
-&mo 1       &kp EQUAL  &kp CARET  &kp AMPS      &kp N4    &kp N8     &kp EQUAL  &kp RSHIFT
-&mo 4       &kp AT     &kp PLUS   &kp DLLR      &kp N1    &kp N5     &kp N9     &trans
-&mo 2       &kp EXCL   &kp PRCNT  &kp HASH      &kp N3    &kp N7     &kp QMARK  &mo 2
-&kp RSHIFT  &kp GRAVE  &kp TILDE  &kp STAR      &kp N2    &kp N6     &kp N0     &mo 1
+&trans       &kp EQUAL  &kp CARET  &kp AMPS      &kp N4    &kp N8     &kp EQUAL  &kp RSHIFT
+&trans       &kp AT     &kp PLUS   &kp DLLR      &kp N1    &kp N5     &kp N9     &trans
+&trans       &kp EXCL   &kp PRCNT  &kp HASH      &kp N3    &kp N7     &kp QMARK  &trans
+&kp RSHIFT  &kp GRAVE  &kp TILDE  &kp STAR      &kp N2    &kp N6     &kp N0     &trans
 &trans      &trans     &kp LBRC   &kp UNDER     &kp FSLH  &kp LPAR   &trans     &kp LEFT
 &trans      &trans     &kp LT     &kp PLUS      &kp PIPE  &kp LBKT   &trans     &kp UP
 &trans      &trans     &kp GT     &trans        &trans    &kp RBKT   &trans     &kp DOWN
