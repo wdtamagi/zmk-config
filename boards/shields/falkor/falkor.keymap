@@ -76,7 +76,7 @@
         scroll {
             layers = <MSC>;
             process-next;
-            input-processors = <&xy_transf (INPUT_TRANSFORM_Y_INVERT)>
+            input-processors = <&xy_transf (INPUT_TRANSFORM_X_INVERT)>
                              , <&xy_scaler 1 55>
                              , <&to_wheel>;
         };
