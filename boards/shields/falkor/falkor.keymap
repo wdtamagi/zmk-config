@@ -231,20 +231,20 @@
             display-name = "Base";
 // -------______----------------_______-----------------_____-----------------______------------------_____---------------_____-------------______-----------------_____-------
 //       | ESC |               |  CTRL |               | DEL |               | BSPC |       ||       | RET |             | TAB |           | CTRL |               | GUI |
-// | NUM |     | SHIFT |   | , |       |  '  |   |  .  |     |  I  |   | SPC |      | R |   ||   | A |     | SPC |   | L |     | J |   | Y |      | ; |   | SHIFT |     | NUM |  
+// | NUM |     | SHIFT |   | , |       | ' |       | . |     | I |     | SPC |      | R |   ||   | A |     | SPC |   | L |     | J |   | Y |      | ; |   | SHIFT |     | NUM |  
 //       | MSC |               |   U   |               |  O  |               |   E  |       ||       |  T  |             |  N  |           |   S  |               | MSC |
 //                                                                                          ||
 //                             | FRESH |               |  UP |                              ||                           |     |           |      |                      
 //                       | PRT |       | CPY |   | LFT |     | RGT |                        ||                       |   |     |   |   |   |      |   |                          
 //                             |  PST  |               | DWN |                              ||                           |     |           |      |                      
 //                                                                                          ||
-//                                                                           |   V  |       ||       | RET |                                                             
-//                                                                     |  M  |      | K |   ||   | A |     | SPC |                                                               
-//                                                                           |   C  |       ||       |  T  |                                                             
+//                                                                           |   V  |       ||       |  P  |                                                             
+//                                                                       | M |      | K |   ||   | F |     | H |                                                               
+//                                                                           |   C  |       ||       |  D  |                                                             
 //                                                                                          ||
-//                                                                           |      |       ||       | RET |                                                             
-//                                                                     |  G  |      | W |   ||   | A |     | SPC |                                                               
-//                                                                           |   Z  |       ||       |  T  |                                                             
+//                                                                           |      |       ||       |  X  |                                                             
+//                                                                       | G |      | W |   ||   | B |     | RPT |                                                               
+//                                                                           |   Z  |       ||       |  Q  |                                                             
             bindings = <
       &kp ESC                     &kp LCTRL                   &kp DEL                     &kp BSPC                    &kp RET                     &kp TAB                     &mkp LCTRL                  &kp LGUI           
 &mo NUM       &sk LSHIFT    &kp COMMA     &kp APOS      &kp DOT       &kp I         &kp SPACE     &kp R         &kp A         &kp SPACE     &kp L         &kp J         &kp Y         &kp SEMI      &sk RSHIFT    &mo NUM
@@ -268,21 +268,21 @@
             display-name = "Num";
 
 // -------______----------------_______-----------------_____-----------------______------------------_____---------------_____-------------______-----------------_____-------
-//       | ESC |               |  CTRL |               | DEL |               | BSPC |       ||       | RET |             | TAB |           | CTRL |               | GUI |
-// | NUM |     | SHIFT |   | , |       |  '  |   |  .  |     |  I  |   | SPC |      | R |   ||   | A |     | SPC |   | L |     | J |   | Y |      | ; |   | SHIFT |     | NUM |  
-//       | MSC |               |   U   |               |  O  |               |   E  |       ||       |  T  |             |  N  |           |   S  |               | MSC |
+//       |     |               |   @   |               |  +  |               |   $  |       ||       |  1  |             |  5  |           |   9  |               | GUI |
+// |     |     | CAPSW |   | = |       | ` |       | ^ |     | ~ |       | & |      | * |   ||   | 1 |     | 2 |     | 8 |     | 6 |   | = |      | 0 |   | CAPSW |     |  |  
+//       | MSC |               |   !   |               |  %  |               |   #  |       ||       |  3  |             |  7  |           |   ?  |               | MSC |
 //                                                                                          ||
-//                             | FRESH |               |  UP |                              ||                           |     |           |      |                      
-//                       | PRT |       | CPY |   | LFT |     | RGT |                        ||                       |   |     |   |   |   |      |   |                          
-//                             |  PST  |               | DWN |                              ||                           |     |           |      |                      
+//                             |       |               |     |                              ||                           |     |           |      |                      
+//                         |   |       |   |       |   |     |   |                          ||                       |   |     |   |   |   |      |   |                          
+//                             |       |               |     |                              ||                           |     |           |      |                      
 //                                                                                          ||
-//                                                                           |   V  |       ||       | RET |                                                             
-//                                                                     |  M  |      | K |   ||   | A |     | SPC |                                                               
-//                                                                           |   C  |       ||       |  T  |                                                             
+//                                                                           |   <  |       ||       |  [  |                                                             
+//                                                                     |  {  |      | } |   ||   | ( |     | ) |                                                               
+//                                                                           |   >  |       ||       |  ]  |                                                             
 //                                                                                          ||
-//                                                                           |      |       ||       | RET |                                                             
-//                                                                     |  G  |      | W |   ||   | A |     | SPC |                                                               
-//                                                                           |   Z  |       ||       |  T  |                                                             
+//                                                                           |      |       ||       |  |  |                                                             
+//                                                                       | _ |      | - |   ||   | / |     | \ |                                                               
+//                                                                           |      |       ||       |     |                                                             
             bindings = <
       &trans                      &kp AT                      &kp PLUS                    &kp DLLR                   &kp N1                       &kp N5                      &mkp N9                     &kp LGUI           
 &trans        &caps_word    &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &kp STAR      &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &kp N0        &caps_word    &trans
@@ -292,34 +292,34 @@
 	                        &trans        &m_copy       &trans        &trans                                                                &trans        &trans        &trans        &trans  
 	                              &trans                      &trans                                                                              &trans                      &trans                    
 
-                                                                                          &kp LT                     &kp PIPE                                     
-	                                                                                &kp LBRC      &kp RBRC      &kp FSLH      &kp NUBS   
+                                                                                          &kp LT                     &kp LBKT                                     
+	                                                                                &kp LBRC      &kp RBRC      &kp LPAR      &kp RPAR   
 	                                                                                      &kp GT                     &trans                        
 
-                                                                                          &trans                     &kp LBKT                                     
-	                                                                                &kp UNDER     &kp MINUS     &kp LPAR      &kp RPAR   
-	                                                                                      &trans                     &kp RBKT                        
+                                                                                          &trans                     &kp PIPE                                     
+	                                                                                &kp UNDER     &kp MINUS     &kp FSLH      &kp NUBS   
+	                                                                                      &trans                     &trans                        
             >;
         };
 
         MSC_layer {
             label = "Msc";
 // -------______----------------_______-----------------_____-----------------______------------------_____---------------_____-------------______-----------------_____-------
-//       | ESC |               |  CTRL |               | DEL |               | BSPC |       ||       | RET |             | TAB |           | CTRL |               | GUI |
-// | NUM |     | SHIFT |   | , |       |  '  |   |  .  |     |  I  |   | SPC |      | R |   ||   | A |     | SPC |   | L |     | J |   | Y |      | ; |   | SHIFT |     | NUM |  
-//       | MSC |               |   U   |               |  O  |               |   E  |       ||       |  T  |             |  N  |           |   S  |               | MSC |
+//       |     |               |   @   |               |  +  |               |   $  |       ||       |  1  |             |  5  |           |   9  |               | GUI |
+// |     |     | CAPSW |   | = |       | ` |       | ^ |     | ~ |       | & |      | * |   ||   | 1 |     | 2 |     | 8 |     | 6 |   | = |      | 0 |   | CAPSW |     |  |  
+//       |     |               |   !   |               |  %  |               |   #  |       ||       |  3  |             |  7  |           |   ?  |               |     |
 //                                                                                          ||
-//                             | FRESH |               |  UP |                              ||                           |     |           |      |                      
-//                       | PRT |       | CPY |   | LFT |     | RGT |                        ||                       |   |     |   |   |   |      |   |                          
-//                             |  PST  |               | DWN |                              ||                           |     |           |      |                      
+//                             |       |               |     |                              ||                           |     |           |      |                      
+//                         |   |       |   |       |   |     |   |                          ||                       |   |     |   |   |   |      |   |                          
+//                             |       |               |     |                              ||                           |     |           |      |                      
 //                                                                                          ||
-//                                                                           |   V  |       ||       | RET |                                                             
-//                                                                     |  M  |      | K |   ||   | A |     | SPC |                                                               
-//                                                                           |   C  |       ||       |  T  |                                                             
+//                                                                           |   <  |       ||       |  [  |                                                             
+//                                                                     |  {  |      | } |   ||   | ( |     | ) |                                                               
+//                                                                           |   >  |       ||       |  ]  |                                                             
 //                                                                                          ||
-//                                                                           |      |       ||       | RET |                                                             
-//                                                                     |  G  |      | W |   ||   | A |     | SPC |                                                               
-//                                                                           |   Z  |       ||       |  T  |                                                             
+//                                                                           |      |       ||       |  |  |                                                             
+//                                                                       | _ |      | - |   ||   | / |     | \ |                                                               
+//                                                                           |      |       ||       |     |                                                             
             bindings = <
       &trans                      &kp AT                      &kp PLUS                    &kp DLLR                   &kp N1                       &kp N5                      &mkp N9                     &kp LGUI           
 &trans        &caps_word    &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &kp STAR      &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &kp N0        &caps_word    &trans
@@ -329,34 +329,34 @@
 	                        &trans        &m_copy       &trans        &trans                                                                &trans        &trans        &trans        &trans  
 	                              &trans                      &trans                                                                              &trans                      &trans                    
 
-                                                                                          &kp LT                     &kp PIPE                                     
-	                                                                                &kp LBRC      &kp RBRC      &kp FSLH      &kp NUBS   
+                                                                                          &kp LT                     &kp LBKT                                     
+	                                                                                &kp LBRC      &kp RBRC      &kp LPAR      &kp RPAR   
 	                                                                                      &kp GT                     &trans                        
 
-                                                                                          &trans                     &kp LBKT                                     
-	                                                                                &kp UNDER     &kp MINUS     &kp LPAR      &kp RPAR   
-	                                                                                      &trans                     &kp RBKT                        
+                                                                                          &trans                     &kp PIPE                                     
+	                                                                                &kp UNDER     &kp MINUS     &kp FSLH      &kp NUBS   
+	                                                                                      &trans                     &trans                        
             >;
         };
 
         MOU_layer {
             display-name = "Mouse";
 // -------______----------------_______-----------------_____-----------------______------------------_____---------------_____-------------______-----------------_____-------
-//       | ESC |               |  CTRL |               | DEL |               | BSPC |       ||       | RET |             | TAB |           | CTRL |               | GUI |
-// | NUM |     | SHIFT |   | , |       |  '  |   |  .  |     |  I  |   | SPC |      | R |   ||   | A |     | SPC |   | L |     | J |   | Y |      | ; |   | SHIFT |     | NUM |  
-//       | MSC |               |   U   |               |  O  |               |   E  |       ||       |  T  |             |  N  |           |   S  |               | MSC |
+//       |     |               |   @   |               |  +  |               |   $  |       ||       |  1  |             |  5  |           |   9  |               | GUI |
+// | BAS |     | CAPSW |   | = |       | ` |       | ^ |     | ~ |       | & |      | * |   ||   | 1 |     | 2 |     | 8 |     | 6 |   | = |      | CUP | | CAPSW |     | BAS |  
+//       |     |               |   !   |               |  %  |               |   #  |       ||       |  3  |             |  7  |           | MCLK |               |     |
 //                                                                                          ||
-//                             | FRESH |               |  UP |                              ||                           |     |           |      |                      
-//                       | PRT |       | CPY |   | LFT |     | RGT |                        ||                       |   |     |   |   |   |      |   |                          
-//                             |  PST  |               | DWN |                              ||                           |     |           |      |                      
+//                             |       |               |     |                              ||                           |     |           |      |                      
+//                         |   |       |   |       |   |     |   |                          ||                       |   |     |   |   |   |      |   |                          
+//                             |       |               |     |                              ||                           |     |           |      |                      
 //                                                                                          ||
-//                                                                           |   V  |       ||       | RET |                                                             
-//                                                                     |  M  |      | K |   ||   | A |     | SPC |                                                               
-//                                                                           |   C  |       ||       |  T  |                                                             
+//                                                                           |   <  |       ||       | RCLK|                                                             
+//                                                                     |  {  |      | } |   ||| LCLK |     | LCLK |                                                               
+//                                                                           |   >  |       ||       | RCLK|                                                             
 //                                                                                          ||
-//                                                                           |      |       ||       | RET |                                                             
-//                                                                     |  G  |      | W |   ||   | A |     | SPC |                                                               
-//                                                                           |   Z  |       ||       |  T  |                                                             
+//                                                                           |      |       ||       |  |  |                                                             
+//                                                                       | _ |      | - |   ||   | / |     | \ |                                                               
+//                                                                           |      |       ||       |     |                                                             
             bindings = <
       &trans                      &kp AT                      &kp PLUS                    &kp DLLR                   &kp N1                       &kp N5                      &mkp N9                     &kp LGUI           
 &to BAS       &caps_word    &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &kp STAR      &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &m_ctrlup     &caps_word    &to BAS
