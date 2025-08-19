@@ -89,87 +89,87 @@
     };
 
     behaviors {
-                ht: hold_tap_mods {
-                        compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>;
-                        tapping-term-ms = <200>;
-                        flavor = "hold-preferred"; bindings = <&kp>, <&kp>;
-                        display-name = "mod-tap";
-                };
-                hm: homerow_mods {
-                        compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>;
-                        tapping-term-ms = <200>; quick-tap-ms = <200>;
-                        flavor = "tap-preferred"; bindings = <&kp>, <&kp>;
-                        display-name = "mod-tap";
-                };
-                hl: homerow_layers {
-                        compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>;
-                        tapping-term-ms = <200>; quick-tap-ms = <200>;
-                        flavor = "tap-preferred"; bindings = <&mo>, <&kp>;
-                        display-name = "hold-layer";
-                };
-                kg: key_press_tap_toggle {
-                        compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>;
-                        tapping-term-ms = <200>; quick-tap-ms = <200>;
-                        flavor = "tap-preferred"; bindings = <&kp>, <&tog>;
-                };
-                mkg: hold_mouse_key_press_tap_toggle {
-                        compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>;
-                        tapping-term-ms = <200>; quick-tap-ms = <200>;
-                        flavor = "tap-preferred"; bindings = <&mkp>, <&tog>;
-                };
-                m_v: mouse_move {
-                        compatible = "zmk,behavior-input-two-axis";
-                        #binding-cells = <1>;
-                        trigger-period-ms = <12>; // slow down for OTA, default is 3ms
-                        x-input-code = <INPUT_REL_X>;
-                        y-input-code = <INPUT_REL_Y>;
-                        time-to-max-speed-ms = <300>;
-                        acceleration-exponent = <1>;
-                };
-                m_s: mouse_scroll {
-                        compatible = "zmk,behavior-input-two-axis";
-                        #binding-cells = <1>;
-                        trigger-period-ms = <12>; // slow down for OTA, default is 3ms
-                        x-input-code = <INPUT_REL_HWHEEL>;
-                        y-input-code = <INPUT_REL_WHEEL>;
-                        time-to-max-speed-ms = <50>;
-                        acceleration-exponent = <1>;
-                };
+        ht: hold_tap_mods {
+            compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred"; bindings = <&kp>, <&kp>;
+            display-name = "mod-tap";
+        };
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>;
+            tapping-term-ms = <200>; quick-tap-ms = <200>;
+            flavor = "tap-preferred"; bindings = <&kp>, <&kp>;
+            display-name = "mod-tap";
+        };
+        hl: homerow_layers {
+            compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>;
+            tapping-term-ms = <200>; quick-tap-ms = <200>;
+            flavor = "tap-preferred"; bindings = <&mo>, <&kp>;
+            display-name = "hold-layer";
+        };
+        kg: key_press_tap_toggle {
+            compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>;
+            tapping-term-ms = <200>; quick-tap-ms = <200>;
+            flavor = "tap-preferred"; bindings = <&kp>, <&tog>;
+        };
+        mkg: hold_mouse_key_press_tap_toggle {
+            compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>;
+            tapping-term-ms = <200>; quick-tap-ms = <200>;
+            flavor = "tap-preferred"; bindings = <&mkp>, <&tog>;
+        };
+        m_v: mouse_move {
+            compatible = "zmk,behavior-input-two-axis";
+            #binding-cells = <1>;
+            trigger-period-ms = <12>; // slow down for OTA, default is 3ms
+            x-input-code = <INPUT_REL_X>;
+            y-input-code = <INPUT_REL_Y>;
+            time-to-max-speed-ms = <300>;
+            acceleration-exponent = <1>;
+        };
+        m_s: mouse_scroll {
+            compatible = "zmk,behavior-input-two-axis";
+            #binding-cells = <1>;
+            trigger-period-ms = <12>; // slow down for OTA, default is 3ms
+            x-input-code = <INPUT_REL_HWHEEL>;
+            y-input-code = <INPUT_REL_WHEEL>;
+            time-to-max-speed-ms = <50>;
+            acceleration-exponent = <1>;
+        };
     };
 
-        mmv_input_listener {
-                compatible = "zmk,input-listener";
-                device = <&m_v>;
-        };
-        mms_input_listener {
-                compatible = "zmk,input-listener";
-                device = <&m_s>;
-        };
+    mmv_input_listener {
+        compatible = "zmk,input-listener";
+        device = <&m_v>;
+    };
+    mms_input_listener {
+        compatible = "zmk,input-listener";
+        device = <&m_s>;
+    };
 
-        combos {
-                compatible = "zmk,combos";
+    combos {
+        compatible = "zmk,combos";
 
-                spc       { timeout-ms = <50>; key-positions = <16 17>; bindings = <&kp SPC>; layers = <BAS NUM>; };
-                bksp      { timeout-ms = <50>; key-positions = <17 18>; bindings = <&kp BKSP>; layers = <BAS NUM>; };
-                del       { timeout-ms = <50>; key-positions = <6 7 8>; bindings = <&kp DEL>; layers = <BAS NUM>; };
+        spc       { timeout-ms = <50>; key-positions = <16 17>; bindings = <&kp SPC>; layers = <BAS NUM>; };
+        bksp      { timeout-ms = <50>; key-positions = <17 18>; bindings = <&kp BKSP>; layers = <BAS NUM>; };
+        del       { timeout-ms = <50>; key-positions = <6 7 8>; bindings = <&kp DEL>; layers = <BAS NUM>; };
 
-                esc       { timeout-ms = <50>; key-positions = <11 12>; bindings = <&kp ESC>; layers = <BAS NUM>; };
-                tab       { timeout-ms = <50>; key-positions = <12 13>; bindings = <&kp TAB>; layers = <BAS NUM>; };
+        esc       { timeout-ms = <50>; key-positions = <11 12>; bindings = <&kp ESC>; layers = <BAS NUM>; };
+        tab       { timeout-ms = <50>; key-positions = <12 13>; bindings = <&kp TAB>; layers = <BAS NUM>; };
 
-                ret_r     { timeout-ms = <50>; key-positions = <26 17 18>; bindings = <&kp RET>; layers = <BAS NUM>; };
-                ret_l     { timeout-ms = <50>; key-positions = <11 12 23>; bindings = <&kp RET>; layers = <BAS NUM>; };
+        ret_r     { timeout-ms = <50>; key-positions = <26 17 18>; bindings = <&kp RET>; layers = <BAS NUM>; };
+        ret_l     { timeout-ms = <50>; key-positions = <11 12 23>; bindings = <&kp RET>; layers = <BAS NUM>; };
 
-                /* tog_lnp   { timeout-ms = <50>; key-positions = <1 2>; bindings = <&tog LNP>; layers = <BAS NUM MSC>; }; */
-                /* tog_rnp   { timeout-ms = <50>; key-positions = <7 8>; bindings = <&tog RNP>; layers = <BAS NUM MSC>; }; */
-                /**/
-                /* mkp_swap  { timeout-ms = <50>; key-positions = <36 38>; bindings = <&tog LHB>; layers = <BAS NUM MSC>; }; */
-                /* mou_swap  { timeout-ms = <50>; key-positions = <46 47>; bindings = <&tog LHB>; layers = <BAS NUM MSC>; }; */
+        /* tog_lnp   { timeout-ms = <50>; key-positions = <1 2>; bindings = <&tog LNP>; layers = <BAS NUM MSC>; }; */
+        /* tog_rnp   { timeout-ms = <50>; key-positions = <7 8>; bindings = <&tog RNP>; layers = <BAS NUM MSC>; }; */
+        /**/
+        /* mkp_swap  { timeout-ms = <50>; key-positions = <36 38>; bindings = <&tog LHB>; layers = <BAS NUM MSC>; }; */
+        /* mou_swap  { timeout-ms = <50>; key-positions = <46 47>; bindings = <&tog LHB>; layers = <BAS NUM MSC>; }; */
 
-                /* tog_msk_ll { timeout-ms = <50>; key-positions = <21 22>; bindings = <&tog MSK>; layers = <BAS NUM MSC>; }; */
-                /* tog_msk_lr { timeout-ms = <50>; key-positions = <27 28>; bindings = <&tog MSK>; layers = <BAS NUM MSC>; }; */
+        /* tog_msk_ll { timeout-ms = <50>; key-positions = <21 22>; bindings = <&tog MSK>; layers = <BAS NUM MSC>; }; */
+        /* tog_msk_lr { timeout-ms = <50>; key-positions = <27 28>; bindings = <&tog MSK>; layers = <BAS NUM MSC>; }; */
 
-                dfu_l     { timeout-ms = <50>; key-positions = <0 1>; bindings = <&bootloader>; layers = <MSC>; };
-        };
+        dfu_l     { timeout-ms = <50>; key-positions = <0 1>; bindings = <&bootloader>; layers = <MSC>; };
+    };
 
     macros {
         m_copy: m_copy {
@@ -186,7 +186,6 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LGUI>
-
                 , <&macro_tap &kp V>
                 , <&macro_release &kp LGUI>
                 ;
@@ -246,7 +245,7 @@
 //                                                                       | G |      | W |   ||   | B |     | RPT |                                                               
 //                                                                           |   Z  |       ||       |  Q  |                                                             
             bindings = <
-      &kp ESC                     &kp LCTRL                   &kp DEL                     &kp BSPC                    &kp RET                     &kp TAB                     &mkp LCTRL                  &kp LGUI           
+      &kp ESC                     &kp LCTRL                   &kp DEL                     &kp BSPC                    &kp RET                     &kp TAB                     &kp LCTRL                   &kp LGUI           
 &mo NUM       &sk LSHIFT    &kp COMMA     &kp APOS      &kp DOT       &kp I         &kp SPACE     &kp R         &kp A         &kp SPACE     &kp L         &kp J         &kp Y         &kp SEMI      &sk RSHIFT    &mo NUM
 	  &mo MSC                     &kp U                       &kp O                       &kp E                       &kp T                       &kp N                       &kp S                       &mo MSC      
 
@@ -284,7 +283,7 @@
 //                                                                       | _ |      | - |   ||   | / |     | \ |                                                               
 //                                                                           |      |       ||       |     |                                                             
             bindings = <
-      &trans                      &kp AT                      &kp PLUS                    &kp DLLR                   &kp N1                       &kp N5                      &mkp N9                     &kp LGUI           
+      &trans                      &kp AT                      &kp PLUS                    &kp DLLR                   &kp N1                       &kp N5                      &kp N9                      &kp LGUI           
 &trans        &caps_word    &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &kp STAR      &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &kp N0        &caps_word    &trans
 	  &mo MSC                     &kp EXCL                    &kp PRCNT                   &kp HASH                   &kp N3                       &kp N7                      &kp QMARK                   &mo MSC      
 
@@ -321,7 +320,7 @@
 //                                                                       | _ |      | - |   ||   | / |     | \ |                                                               
 //                                                                           |      |       ||       |     |                                                             
             bindings = <
-      &trans                      &kp AT                      &kp PLUS                    &kp DLLR                   &kp N1                       &kp N5                      &mkp N9                     &kp LGUI           
+      &trans                      &kp AT                      &kp PLUS                    &kp DLLR                   &kp N1                       &kp N5                      &kp N9                      &kp LGUI           
 &trans        &caps_word    &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &kp STAR      &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &kp N0        &caps_word    &trans
 	  &trans                      &kp EXCL                    &kp PRCNT                   &kp HASH                   &kp N3                       &kp N7                      &kp QMARK                   &trans      
 
@@ -358,7 +357,7 @@
 //                                                                       | _ |      | - |   ||   | / |     | \ |                                                               
 //                                                                           |      |       ||       |     |                                                             
             bindings = <
-      &trans                      &kp AT                      &kp PLUS                    &kp DLLR                   &kp N1                       &kp N5                      &mkp N9                     &kp LGUI           
+      &trans                      &kp AT                      &kp PLUS                    &kp DLLR                   &kp N1                       &kp N5                      &kp N9                      &kp LGUI           
 &to BAS       &caps_word    &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &kp STAR      &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &m_ctrlup     &caps_word    &to BAS
 	  &mo MSC                     &kp EXCL                    &kp PRCNT                   &kp HASH                   &kp N3                       &kp N7                      &mkp MCLK                   &mo MSC      
 
