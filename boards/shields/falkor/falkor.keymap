@@ -71,9 +71,7 @@
         require-prior-idle-ms = <2000>;
         excluded-positions = <
             7
-            8
             21
-            23
             30
             49
             52
@@ -136,6 +134,7 @@
         m_v: mouse_move {
             compatible = "zmk,behavior-input-two-axis";
             #binding-cells = <1>;
+
             trigger-period-ms = <12>; // slow down for OTA, default is 3ms
             x-input-code = <INPUT_REL_X>;
             y-input-code = <INPUT_REL_Y>;
@@ -374,7 +373,7 @@
 //                                                                           |      |       ||       |     |                                                             
             bindings = <
       &trans                      &kp AT                      &kp PLUS                    &kp DLLR                   &kp N1                       &kp N5                      &kp N9                      &kp LGUI           
-&to BAS       &caps_word    &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &kp STAR      &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &m_ctrlup     &caps_word    &to BAS
+&mo NUM       &caps_word    &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &kp STAR      &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &m_ctrlup     &caps_word    &mo NUM
 	  &mo MSC                     &kp EXCL                    &kp PRCNT                   &kp HASH                   &kp N3                       &kp N7                      &mkp MCLK                   &mo MSC      
 
                                   &trans                      &trans                                                                              &trans                      &trans                          
