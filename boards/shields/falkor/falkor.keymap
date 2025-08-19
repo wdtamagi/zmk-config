@@ -350,9 +350,9 @@
 //                         |   |       |   |       |   |     |   |                          ||                       |   |     |   |   |   |      |   |                          
 //                             |       |               |     |                              ||                           |     |           |      |                      
 //                                                                                          ||
-//                                                                           |   <  |       ||       | RCLK|                                                             
-//                                                                     |  {  |      | } |   ||| LCLK |     | LCLK |                                                               
-//                                                                           |   >  |       ||       | RCLK|                                                             
+//                                                                           |   <  |       ||       | LCLK|                                                             
+//                                                                     |  {  |      | } |   ||| RCLK |     | RCLK |                                                               
+//                                                                           |   >  |       ||       | LCLK|                                                             
 //                                                                                          ||
 //                                                                           |      |       ||       |  |  |                                                             
 //                                                                       | _ |      | - |   ||   | / |     | \ |                                                               
@@ -366,9 +366,9 @@
 	                        &trans        &m_copy       &trans        &trans                                                                &trans        &trans        &trans        &trans  
 	                              &trans                      &trans                                                                              &trans                      &trans                    
 
-                                                                                          &kp LT                     &mkp RCLK                                     
-	                                                                                &kp LBRC      &kp RBRC      &mkp LCLK     &mkp LCLK  
-	                                                                                      &kp GT                     &mkp RCLK                        
+                                                                                          &kp LT                     &mkp LCLK                                     
+	                                                                                &kp LBRC      &kp RBRC      &mkp RCLK     &mkp RCLK  
+	                                                                                      &kp GT                     &mkp LCLK                        
 
                                                                                           &trans                     &kp LBKT                                     
 	                                                                                &kp UNDER     &kp MINUS     &kp LPAR      &kp RPAR   
