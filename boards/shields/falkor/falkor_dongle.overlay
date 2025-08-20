@@ -27,17 +27,6 @@
 	};
 };
 
-&kscan0 {
-	compatible = "zmk,kscan-gpio-matrix";
-	
-  col-gpios
-      = <&gpio1 0 GPIO_ACTIVE_HIGH>
-      , <&gpio0 11 GPIO_ACTIVE_HIGH>
-      , <&gpio1 4 GPIO_ACTIVE_HIGH>
-      , <&gpio1 6 GPIO_ACTIVE_HIGH>
-      ;
-};
-
 / {
   tball_listener {
     status = "okay";

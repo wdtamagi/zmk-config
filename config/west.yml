@@ -30,5 +30,8 @@ manifest:
     - name: zmk-input-processor-xyz
       remote: badjeff
       revision: main
+    - name: zmk-dongle-screen
+      remote: wdtamagi
+      revision: main
   self:
     path: config
