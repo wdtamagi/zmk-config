@@ -1,3 +1,4 @@
+#include "falkor.dtsi"
 #include "falkor_zplit.dtsi"
 
 / {
@@ -13,3 +14,32 @@
     };
 };
 
+/ {
+	vtrackball: virtual_input_trackball {
+		compatible = "zmk,virtual-input";
+	};
+
+	input_relay_config_trackball {
+		compatible = "zmk,split-peripheral-input-relay";
+		device = <&vtrackball>;
+		relay-channel = <102>;
+	};
+};
+
+&kscan0 {
+    compatible = "zmk,kscan-gpio-matrix";
+	
+    col-gpios
+        = <&gpio0 31 GPIO_ACTIVE_HIGH>
+        , <&gpio0 29 GPIO_ACTIVE_HIGH>
+        , <&gpio0 2 GPIO_ACTIVE_HIGH>
+        , <&gpio1 15 GPIO_ACTIVE_HIGH>
+        ;
+};
+
+/ {
+    tball_listener {
+        status = "okay";
+        device = <&tball>;
+  };
+};
