@@ -1,5 +1,4 @@
 #include "falkor.dtsi"
-#include "falkor_3610.dtsi"
 #include "falkor_zplit.dtsi"
 
 / {
@@ -15,17 +14,6 @@
     };
 };
 
-/ {
-	vtrackball: virtual_input_trackball {
-		compatible = "zmk,virtual-input";
-	};
-
-	input_relay_config_trackball {
-		compatible = "zmk,split-peripheral-input-relay";
-		device = <&vtrackball>;
-		relay-channel = <102>;
-	};
-};
 
 &kscan0 {
     compatible = "zmk,kscan-gpio-matrix";
@@ -38,9 +26,3 @@
         ;
 };
 
-/ {
-    tball_listener {
-        status = "okay";
-        device = <&tball>;
-    };
-};
