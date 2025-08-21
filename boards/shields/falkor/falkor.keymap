@@ -155,6 +155,12 @@
             time-to-max-speed-ms = <50>;
             acceleration-exponent = <1>;
         };
+        s_cw: tap_dance_shift_capsword {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LSHIFT>, <&caps_word>;
+        };
     };
 
     mmv_input_listener {
@@ -284,7 +290,7 @@
 //                                                                           |   Z  |       ||       |  Q  |                                                             
             bindings = <
       &kp ESC                     &kp LCTRL                   &kp DEL                     &kp BSPC                    &kp RET                     &kp TAB                     &kp LCTRL                   &kp LGUI           
-&mo NUM       &sk LSHIFT    &kp COMMA     &kp APOS      &kp DOT       &kp I         &kp SPACE     &kp R         &kp A         &kp SPACE     &kp L         &kp J         &kp Y         &kp SEMI      &sk RSHIFT    &mo NUM
+&mo NUM       &s_cw         &kp COMMA     &kp APOS      &kp DOT       &kp I         &kp SPACE     &kp R         &kp A         &kp SPACE     &kp L         &kp J         &kp Y         &kp SEMI      &s_cw         &mo NUM
 	  &mo MSC                     &kp U                       &kp O                       &kp E                       &kp T                       &kp N                       &kp S                       &mo MSC      
 
                                   &m_brefresh                 &kp UP                                                                              &trans                      &trans                          
@@ -322,7 +328,7 @@
 //                                                                           |      |       ||       |     |                                                             
             bindings = <
       &trans                      &kp AT                      &kp PLUS                    &kp DLLR                   &kp N1                       &kp N5                      &kp N9                      &kp LGUI           
-&trans        &caps_word    &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &kp STAR      &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &kp N0        &caps_word    &trans
+&trans        &s_cw         &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &kp STAR      &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &kp N0        &s_cw         &trans
 	  &mo MSC                     &kp EXCL                    &kp PRCNT                   &kp HASH                   &kp N3                       &kp N7                      &kp QMARK                   &mo MSC      
 
                                   &trans                      &trans                                                                              &trans                      &trans                          
@@ -359,7 +365,7 @@
 //                                                                           |      |       ||       |     |                                                             
             bindings = <
       &trans                      &kp AT                      &kp PLUS                    &kp DLLR                   &kp N1                       &kp N5                      &kp N9                      &kp LGUI           
-&trans        &caps_word    &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &kp STAR      &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &kp N0        &caps_word    &trans
+&trans        &s_cw         &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &kp STAR      &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &kp N0        &s_cw         &trans
 	  &trans                      &kp EXCL                    &kp PRCNT                   &kp HASH                   &kp N3                       &kp N7                      &kp QMARK                   &trans      
 
                                   &trans                      &trans                                                                              &trans                      &trans                          
@@ -396,7 +402,7 @@
 //                                                                           |      |       ||       |     |                                                             
             bindings = <
       &trans                      &kp AT                      &kp PLUS                    &mkp LCLk                  &kp N1                       &kp N5                      &kp N9                      &kp LGUI           
-&mo NUM       &caps_word    &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &mkp MCLK     &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &m_ctrlup     &caps_word    &mo NUM
+&mo NUM       &s_cw         &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &mkp MCLK     &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &m_ctrlup     &s_cw         &mo NUM
 	  &mo MSC                     &kp EXCL                    &kp PRCNT                   &mkp RCLK                  &kp N3                       &kp N7                      &mkp MCLK                   &mo MSC      
 
                                   &m_zoom_in                  &trans                                                                              &trans                      &trans                          
