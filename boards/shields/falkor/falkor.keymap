@@ -401,7 +401,7 @@
 //                                                                       | _ |      | - |   ||   | / |     | \ |                                                               
 //                                                                           |      |       ||       |     |                                                             
             bindings = <
-      &trans                      &kp AT                      &kp PLUS                    &mkp LCLk                  &kp N1                       &kp N5                      &kp N9                      &kp LGUI           
+      &trans                      &kp AT                      &kp PLUS                    &mkp LCLK                  &kp N1                       &kp N5                      &kp N9                      &kp LGUI           
 &mo NUM       &s_cw         &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &mkp MCLK     &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &m_ctrlup     &s_cw         &mo NUM
 	  &mo MSC                     &kp EXCL                    &kp PRCNT                   &mkp RCLK                  &kp N3                       &kp N7                      &mkp MCLK                   &mo MSC      
 
