@@ -1,5 +1,5 @@
-#include <zephyr/dt-bindings/input/input-event-codes.h>
-#include <behaviors.dtsi>
+#include <zephyr/dt-bindings/input/input-event-codes.h> #include
+<behaviors.dtsi>
 #include <behaviors.dtsi>
 #include <behaviors/studio_unlock.dtsi>
 #include <behaviors/mouse_keys.dtsi>
@@ -174,30 +174,30 @@
         device = <&m_s>;
     };
 
-    combos {
-        compatible = "zmk,combos";
- 
-       spc       { timeout-ms = <50>; key-positions = <16 17>; bindings = <&kp SPC>; layers = <BAS NUM>; };
-        bksp      { timeout-ms = <50>; key-positions = <17 18>; bindings = <&kp BKSP>; layers = <BAS NUM>; };
-        del       { timeout-ms = <50>; key-positions = <6 7 8>; bindings = <&kp DEL>; layers = <BAS NUM>; };
-
-        esc       { timeout-ms = <50>; key-positions = <11 12>; bindings = <&kp ESC>; layers = <BAS NUM>; };
-        tab       { timeout-ms = <50>; key-positions = <12 13>; bindings = <&kp TAB>; layers = <BAS NUM>; };
-
-        ret_r     { timeout-ms = <50>; key-positions = <26 17 18>; bindings = <&kp RET>; layers = <BAS NUM>; };
-        ret_l     { timeout-ms = <50>; key-positions = <11 12 23>; bindings = <&kp RET>; layers = <BAS NUM>; };
-
-        /* tog_lnp   { timeout-ms = <50>; key-positions = <1 2>; bindings = <&tog LNP>; layers = <BAS NUM MSC>; }; */
-        /* tog_rnp   { timeout-ms = <50>; key-positions = <7 8>; bindings = <&tog RNP>; layers = <BAS NUM MSC>; }; */
-        /**/
-        /* mkp_swap  { timeout-ms = <50>; key-positions = <36 38>; bindings = <&tog LHB>; layers = <BAS NUM MSC>; }; */
-        /* mou_swap  { timeout-ms = <50>; key-positions = <46 47>; bindings = <&tog LHB>; layers = <BAS NUM MSC>; }; */
-
-        /* tog_msk_ll { timeout-ms = <50>; key-positions = <21 22>; bindings = <&tog MSK>; layers = <BAS NUM MSC>; }; */
-        /* tog_msk_lr { timeout-ms = <50>; key-positions = <27 28>; bindings = <&tog MSK>; layers = <BAS NUM MSC>; }; */
-
-        dfu_l     { timeout-ms = <50>; key-positions = <0 1>; bindings = <&bootloader>; layers = <MSC>; };
-    };
+    /* combos { */
+    /*     compatible = "zmk,combos"; */
+    /**/
+    /*     spc       { timeout-ms = <50>; key-positions = <16 17>; bindings = <&kp SPC>; layers = <BAS NUM>; }; */
+    /*     bksp      { timeout-ms = <50>; key-positions = <17 18>; bindings = <&kp BKSP>; layers = <BAS NUM>; }; */
+    /*     del       { timeout-ms = <50>; key-positions = <6 7 8>; bindings = <&kp DEL>; layers = <BAS NUM>; }; */
+    /**/
+    /*     esc       { timeout-ms = <50>; key-positions = <11 12>; bindings = <&kp ESC>; layers = <BAS NUM>; }; */
+    /*     tab       { timeout-ms = <50>; key-positions = <12 13>; bindings = <&kp TAB>; layers = <BAS NUM>; }; */
+    /**/
+    /*     ret_r     { timeout-ms = <50>; key-positions = <26 17 18>; bindings = <&kp RET>; layers = <BAS NUM>; }; */
+    /*     ret_l     { timeout-ms = <50>; key-positions = <11 12 23>; bindings = <&kp RET>; layers = <BAS NUM>; }; */
+    /**/
+    /*     /* tog_lnp   { timeout-ms = <50>; key-positions = <1 2>; bindings = <&tog LNP>; layers = <BAS NUM MSC>; }; */ */
+    /*     /* tog_rnp   { timeout-ms = <50>; key-positions = <7 8>; bindings = <&tog RNP>; layers = <BAS NUM MSC>; }; */ */
+    /*     /**/ */
+    /*     /* mkp_swap  { timeout-ms = <50>; key-positions = <36 38>; bindings = <&tog LHB>; layers = <BAS NUM MSC>; }; */ */
+    /*     /* mou_swap  { timeout-ms = <50>; key-positions = <46 47>; bindings = <&tog LHB>; layers = <BAS NUM MSC>; }; */ */
+    /**/
+    /*     /* tog_msk_ll { timeout-ms = <50>; key-positions = <21 22>; bindings = <&tog MSK>; layers = <BAS NUM MSC>; }; */ */
+    /*     /* tog_msk_lr { timeout-ms = <50>; key-positions = <27 28>; bindings = <&tog MSK>; layers = <BAS NUM MSC>; }; */ */
+    /**/
+    /*     dfu_l     { timeout-ms = <50>; key-positions = <0 1>; bindings = <&bootloader>; layers = <MSC>; }; */
+    /* }; */
 
     macros {
         m_copy: m_copy {
