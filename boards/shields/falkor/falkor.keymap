@@ -345,7 +345,7 @@
 
                                                                                           &kp LT                     &kp LBKT                                     
 	                                                                                &kp LBRC      &kp RBRC      &kp LPAR      &kp RPAR   
-	                                                                                      &kp GT                     &trans                        
+	                                                                                      &kp GT                     &kp RBKT                       
 
                                                                                           &trans                     &kp PIPE                                     
 	                                                                                &kp UNDER     &kp MINUS     &kp FSLH      &kp NUBS   
