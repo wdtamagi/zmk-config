@@ -70,9 +70,14 @@
         #input-processor-cells = <2>;
         require-prior-idle-ms = <2000>;
         excluded-positions = <
+            3
             7
+            15
             21
+            27
             30
+            31
+            43
             49
             52
             53
@@ -236,6 +241,24 @@
                 , <&macro_release &kp LSHIFT>
                 ;
         };
+        m_zoom_in: m_zoom_in {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp PLUS>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        m_zoom_out: m_zoom_out {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp MINUS>
+                , <&macro_release &kp LGUI>
+                ;
+        };
     };
 
     keymap {
@@ -372,13 +395,13 @@
 //                                                                       | _ |      | - |   ||   | / |     | \ |                                                               
 //                                                                           |      |       ||       |     |                                                             
             bindings = <
-      &trans                      &kp AT                      &kp PLUS                    &kp DLLR                   &kp N1                       &kp N5                      &kp N9                      &kp LGUI           
-&mo NUM       &caps_word    &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &kp STAR      &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &m_ctrlup     &caps_word    &mo NUM
-	  &mo MSC                     &kp EXCL                    &kp PRCNT                   &kp HASH                   &kp N3                       &kp N7                      &mkp MCLK                   &mo MSC      
+      &trans                      &kp AT                      &kp PLUS                    &mkp LCLk                  &kp N1                       &kp N5                      &kp N9                      &kp LGUI           
+&mo NUM       &caps_word    &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &mkp MCLK     &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &m_ctrlup     &caps_word    &mo NUM
+	  &mo MSC                     &kp EXCL                    &kp PRCNT                   &mkp RCLK                  &kp N3                       &kp N7                      &mkp MCLK                   &mo MSC      
 
-                                  &trans                      &trans                                                                              &trans                      &trans                          
+                                  &m_zoom_in                  &trans                                                                              &trans                      &trans                          
 	                        &trans        &m_copy       &trans        &trans                                                                &trans        &trans        &trans        &trans  
-	                              &trans                      &trans                                                                              &trans                      &trans                    
+	                              &m_zoom_out                 &trans                                                                              &trans                      &trans                    
 
                                                                                           &kp LT                     &mkp LCLK                                     
 	                                                                                &kp LBRC      &kp RBRC      &mkp RCLK     &mkp RCLK  
