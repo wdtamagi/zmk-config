@@ -1,5 +1,5 @@
-#include <zephyr/dt-bindings/input/input-event-codes.h> #include
-<behaviors.dtsi>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <behaviors.dtsi>
 #include <behaviors.dtsi>
 #include <behaviors/studio_unlock.dtsi>
 #include <behaviors/mouse_keys.dtsi>
