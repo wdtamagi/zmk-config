@@ -72,12 +72,14 @@
         excluded-positions = <
             3
             7
+            9
             15
             21
+            22
             27
             30
-            31
-            43
+            32
+            44
             49
             52
             53
@@ -174,7 +176,8 @@
 
     combos {
         compatible = "zmk,combos";
-        spc       { timeout-ms = <50>; key-positions = <16 17>; bindings = <&kp SPC>; layers = <BAS NUM>; };
+ 
+       spc       { timeout-ms = <50>; key-positions = <16 17>; bindings = <&kp SPC>; layers = <BAS NUM>; };
         bksp      { timeout-ms = <50>; key-positions = <17 18>; bindings = <&kp BKSP>; layers = <BAS NUM>; };
         del       { timeout-ms = <50>; key-positions = <6 7 8>; bindings = <&kp DEL>; layers = <BAS NUM>; };
 
@@ -251,7 +254,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LGUI>
-                , <&macro_tap &kp PLUS>
+                , <&macro_tap &kp EQUAL>
                 , <&macro_release &kp LGUI>
                 ;
         };
@@ -400,8 +403,8 @@
 //                                                                       | _ |      | - |   ||   | / |     | \ |                                                               
 //                                                                           |      |       ||       |     |                                                             
             bindings = <
-      &trans                      &kp AT                      &kp PLUS                    &mkp LCLK                  &kp N1                       &kp N5                      &kp N9                      &kp LGUI           
-&mo NUM       &s_cw         &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &mkp MCLK     &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &m_ctrlup     &s_cw         &mo NUM
+      &kp ESC                     &kp AT                      &kp PLUS                    &mkp LCLK                  &kp N1                       &kp N5                      &kp N9                      &kp LGUI           
+&mo NUM       &kp LSHIFT    &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &mkp MCLK     &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &m_ctrlup     &kp LSHIFT    &mo NUM
 	  &mo MSC                     &kp EXCL                    &kp PRCNT                   &mkp RCLK                  &kp N3                       &kp N7                      &mkp MCLK                   &mo MSC      
 
                                   &m_zoom_in                  &trans                                                                              &trans                      &trans                          
