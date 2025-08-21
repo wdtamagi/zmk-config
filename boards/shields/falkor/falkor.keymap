@@ -93,13 +93,13 @@
             process-next;
             input-processors = <&zip_temp_layer 3 2000>;
         };
-        precise {
-            layers = <MSC>;
-            process-next;
-            input-processors = <&xy_scaler 1 3>;
-        };
+        /* precise { */
+        /*     layers = <MSC>; */
+        /*     process-next; */
+        /*     input-processors = <&xy_scaler 1 3>; */
+        /* }; */
         scroll {
-            layers = <NUM>;
+            layers = <NUM MSC>;
             process-next;
             input-processors = <&xy_transf (INPUT_TRANSFORM_X_INVERT)>
                              , <&xy_scaler 1 55>
