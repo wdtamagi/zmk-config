@@ -65,36 +65,36 @@
         map = <INPUT_REL_X INPUT_REL_HWHEEL>
             , <INPUT_REL_Y INPUT_REL_WHEEL>;
     };
-    zip_temp_layer: zip_temp_layer {
-        compatible = "zmk,input-processor-temp-layer";
-        #input-processor-cells = <2>;
-        require-prior-idle-ms = <2000>;
-        excluded-positions = <
-            3
-            7
-            9
-            15
-            21
-            22
-            27
-            30
-            32
-            44
-            49
-            52
-            53
-            55
-        >;
-    };
+    /* zip_temp_layer: zip_temp_layer { */
+    /*     compatible = "zmk,input-processor-temp-layer"; */
+    /*     #input-processor-cells = <2>; */
+    /*     require-prior-idle-ms = <2000>; */
+    /*     excluded-positions = < */
+    /*         3 */
+    /*         7 */
+    /*         9 */
+    /*         15 */
+    /*         21 */
+    /*         22 */
+    /*         27 */
+    /*         30 */
+    /*         32 */
+    /*         44 */
+    /*         49 */
+    /*         52 */
+    /*         53 */
+    /*         55 */
+    /*     >; */
+    /* }; */
     tracball_mmv_il {
         compatible = "zmk,input-listener";
         device = <&tball_split>;
         input-processors = <&zip_zxy>, <&xy_scaler 4 1>;
-        layer_move {
-            layers = <BAS>;
-            process-next;
-            input-processors = <&zip_temp_layer 3 2000>;
-        };
+        /* layer_move { */
+        /*     layers = <BAS>; */
+        /*     process-next; */
+        /*     input-processors = <&zip_temp_layer 3 2000>; */
+        /* }; */
         /* precise { */
         /*     layers = <MSC>; */
         /*     process-next; */
@@ -303,7 +303,7 @@
 	                                                                                &kp M         &kp K         &kp F         &kp H   
 	                                                                                      &kp C                       &kp D                        
 
-                                                                                          &trans                      &kp X                                     
+                                                                                          &tog MOU                    &kp X                                     
 	                                                                                &kp G         &kp W         &kp B         &key_repeat   
 	                                                                                      &kp Z                       &kp Q                        
             >;
@@ -403,7 +403,7 @@
 //                                                                       | _ |      | - |   ||   | / |     | \ |                                                               
 //                                                                           |      |       ||       |     |                                                             
             bindings = <
-      &kp ESC                     &kp AT                      &kp PLUS                    &mkp LCLK                  &kp N1                       &kp N5                      &kp N9                      &kp LGUI           
+      &tog BAS                    &kp AT                      &kp PLUS                    &mkp LCLK                  &kp N1                       &kp N5                      &kp N9                      &tog BAS           
 &mo NUM       &kp LSHIFT    &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &mkp MCLK     &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &m_ctrlup     &kp LSHIFT    &mo NUM
 	  &mo MSC                     &kp EXCL                    &kp PRCNT                   &mkp RCLK                  &kp N3                       &kp N7                      &mkp MCLK                   &mo MSC      
 
