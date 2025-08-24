@@ -65,36 +65,24 @@
         map = <INPUT_REL_X INPUT_REL_HWHEEL>
             , <INPUT_REL_Y INPUT_REL_WHEEL>;
     };
-    /* zip_temp_layer: zip_temp_layer { */
-    /*     compatible = "zmk,input-processor-temp-layer"; */
-    /*     #input-processor-cells = <2>; */
-    /*     require-prior-idle-ms = <2000>; */
-    /*     excluded-positions = < */
-    /*         3 */
-    /*         7 */
-    /*         9 */
-    /*         15 */
-    /*         21 */
-    /*         22 */
-    /*         27 */
-    /*         30 */
-    /*         32 */
-    /*         44 */
-    /*         49 */
-    /*         52 */
-    /*         53 */
-    /*         55 */
-    /*     >; */
-    /* }; */
+    zip_temp_layer: zip_temp_layer {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+        require-prior-idle-ms = <2000>;
+        excluded-positions = <
+            9
+            22
+        >;
+    };
     tracball_mmv_il {
         compatible = "zmk,input-listener";
         device = <&tball_split>;
         input-processors = <&zip_zxy>, <&xy_scaler 4 1>;
-        /* layer_move { */
-        /*     layers = <BAS>; */
-        /*     process-next; */
-        /*     input-processors = <&zip_temp_layer 3 2000>; */
-        /* }; */
+        layer_move {
+            layers = <BAS>;
+            process-next;
+            input-processors = <&zip_temp_layer 3 3000>;
+        };
         /* precise { */
         /*     layers = <MSC>; */
         /*     process-next; */
@@ -339,7 +327,7 @@
 
                                                                                           &kp LT                     &kp LBKT                                     
 	                                                                                &kp LBRC      &kp RBRC      &kp LPAR      &kp RPAR   
-	                                                                                      &kp GT                     &trans                        
+	                                                                                      &kp GT                     &kp RBKT                        
 
                                                                                           &trans                     &kp PIPE                                     
 	                                                                                &kp UNDER     &kp MINUS     &kp FSLH      &kp NUBS   
