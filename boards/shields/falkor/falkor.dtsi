@@ -1,8 +1,9 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "falkor-layouts.dtsi"
+#include "falkor_layouts.dtsi"
 
 / {
     chosen {
+        zmk,physical-layout = &physical_layout0;
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
     };
@@ -50,7 +51,3 @@
     };
 };
 
-&physical_layout0 {
-    kscan = <&kscan0>; // Label of the kscan node this layout uses
-    transform = <&default_transform>; // Label of the matrix transform this layout uses
-};
