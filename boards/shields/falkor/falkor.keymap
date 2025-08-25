@@ -323,7 +323,7 @@
 
                                   &trans                      &trans                                                                              &trans                      &trans                          
 	                        &trans        &m_copy       &trans        &trans                                                                &trans        &trans        &trans        &trans  
-	                              &trans                      &trans                                                                              &trans                      &trans                    
+	                              &trans                      &studio_unlock                                                                      &trans                      &trans                    
 
                                                                                           &kp LT                     &kp LBKT                                     
 	                                                                                &kp LBRC      &kp RBRC      &kp LPAR      &kp RPAR   
