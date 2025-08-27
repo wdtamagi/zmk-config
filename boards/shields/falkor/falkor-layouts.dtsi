@@ -4,8 +4,6 @@
     falkor_physical_layout: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "Falkor Layout";
-        status = "okay";
-        kscan = <&kscan0>;
         transform = <&default_transform>;
 
         keys  //                     w   h    x    y     rot    rx    ry
