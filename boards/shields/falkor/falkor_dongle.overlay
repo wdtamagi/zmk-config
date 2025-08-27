@@ -1,10 +1,6 @@
 #include "falkor_zplit.dtsi"
-#include "falkor-layouts.dtsi"
 #include <dt-bindings/zmk/matrix_transform.h>
-
-&falkor_physical_layout {
-    transform = <&default_transform>;
-};
+#include <physical_layouts.dtsi>
 
 / {
     chosen {
