@@ -215,7 +215,7 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        m1_ctrlup: m_ctrlup {
+        m_ctrlup: m_ctrlup {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -304,10 +304,10 @@
 	                                                                                &kp G         &kp W         &kp B         &key_repeat   
 	                                                                                      &kp Z                       &kp Q                        
             >;
-        };z-
+        };
 
         NUM_layer {
-            digsplay-name = "Num";
+            display-name = "Num";
 
 // -------______----------------_______-----------------_____-----------------______------------------_____---------------_____-------------______-----------------_____-------
 //       |     |               |   @   |               |  +  |               |   $  |       ||       |  1  |             |  5  |           |   9  |               | GUI |
