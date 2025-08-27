@@ -1,22 +1,16 @@
 #include "falkor.dtsi"
-/* #include "falkor_3610.dtsi" */
 #include "falkor_nview.dtsi"
 #include "falkor_zplit.dtsi"
 
 &kscan0 {
-	compatible = "zmk,kscan-gpio-matrix";
-	
-  col-gpios
-      = <&gpio1 0 GPIO_ACTIVE_HIGH>
-      , <&gpio0 11 GPIO_ACTIVE_HIGH>
-      , <&gpio1 4 GPIO_ACTIVE_HIGH>
-      , <&gpio1 6 GPIO_ACTIVE_HIGH>
-      ;
+    compatible = "zmk,kscan-gpio-matrix";
+
+    col-gpios
+        = <&gpio1 0 GPIO_ACTIVE_HIGH>
+        , <&gpio0 11 GPIO_ACTIVE_HIGH>
+        , <&gpio1 4 GPIO_ACTIVE_HIGH>
+        , <&gpio1 6 GPIO_ACTIVE_HIGH>
+        ;
 };
 
 &tball_split { status = "disabled"; };
-/* / { */
-/* 	vtrackball: virtual_input_trackball { */
-/* 		compatible = "zmk,virtual-input"; */
-/* 	}; */
-/* }; */
