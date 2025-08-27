@@ -1,5 +1,6 @@
 #include "falkor.dtsi"
 #include "falkor_zplit.dtsi"
+#include <dt-bindings/zmk/matrix_transform.h>
 
 / {
     mock_kscan: kscan_1 {
