@@ -70,7 +70,17 @@
         require-prior-idle-ms = <2000>;
         excluded-positions = <
             9
+            3
+            15
             22
+            27
+            32
+            37
+            44
+            49
+            52
+            53
+            55
         >;
     };
     tracball_mmv_il {
@@ -205,7 +215,7 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        m_ctrlup: m_ctrlup {
+        m1_ctrlup: m_ctrlup {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -294,10 +304,10 @@
 	                                                                                &kp G         &kp W         &kp B         &key_repeat   
 	                                                                                      &kp Z                       &kp Q                        
             >;
-        };
+        };z-
 
         NUM_layer {
-            display-name = "Num";
+            digsplay-name = "Num";
 
 // -------______----------------_______-----------------_____-----------------______------------------_____---------------_____-------------______-----------------_____-------
 //       |     |               |   @   |               |  +  |               |   $  |       ||       |  1  |             |  5  |           |   9  |               | GUI |
