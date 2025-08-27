@@ -1,6 +1,6 @@
 #include <physical_layouts.dtsi>
 
-/{
+/ {
     falkor_physical_layout: falkor_physical_layout {
         compatible = "zmk,physical-layout";
         display-name = "Default Layout";
