@@ -363,7 +363,7 @@
 //                                                                           |      |       ||       |  |  |                                                             
 //                                                                       | _ |      | - |   ||   | / |     | \ |                                                               
 //                                                                           |      |       ||       |     |                                                             
-            bindirans<
+            bindings = <
       &trans                      &trans                      &trans                      &trans                      &trans                      &trans                      &trans                      &trans          
 &trans        &s_cw         &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 	  &trans                      &trans                      &trans                      &trans                      &trans                      &trans                      &trans                      &trans      
