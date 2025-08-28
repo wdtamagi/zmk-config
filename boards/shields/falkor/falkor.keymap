@@ -70,17 +70,18 @@
         require-prior-idle-ms = <2000>;
         excluded-positions = <
             9
-            3
+            14
             15
             22
             27
-            32
-            37
-            44
             49
             52
-            53
+            52
             55
+            57
+            60
+            61
+            63
         >;
     };
     tracball_mmv_il {
@@ -90,7 +91,7 @@
         layer_move {
             layers = <BAS>;
             process-next;
-            input-processors = <&zip_temp_layer 3 3000>;
+            input-processors = <&zip_temp_layer 3 2000>;
         };
         /* precise { */
         /*     layers = <MSC>; */
@@ -101,7 +102,7 @@
             layers = <NUM MSC>;
             process-next;
             input-processors = <&xy_transf (INPUT_TRANSFORM_X_INVERT)>
-                             , <&xy_scaler 1 55>
+                             , <&xy_scaler 1 45>
                              , <&to_wheel>;
         };
     };
@@ -158,7 +159,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LSHIFT>, <&caps_word>;
+            bindings = <&sk LSHIFT>, <&caps_word>;
         };
     };
 
@@ -288,19 +289,19 @@
 //                                                                       | G |      | W |   ||   | B |     | RPT |                                                               
 //                                                                           |   Z  |       ||       |  Q  |                                                             
             bindings = <
-      &kp ESC                     &kp LCTRL                   &kp DEL                     &kp BSPC                    &kp RET                     &kp TAB                     &kp LCTRL                   &kp LGUI           
+      &mt LGUI ESC                &kp LCTRL                   &kp DEL                     &kp BSPC                    &kp RET                     &kp TAB                     &kp LCTRL                   &mt RGUI ESC           
 &mo NUM       &s_cw         &kp COMMA     &kp APOS      &kp DOT       &kp I         &kp SPACE     &kp R         &kp A         &kp SPACE     &kp L         &kp J         &kp Y         &kp SEMI      &s_cw         &mo NUM
 	  &mo MSC                     &kp U                       &kp O                       &kp E                       &kp T                       &kp N                       &kp S                       &mo MSC      
 
-                                  &m_brefresh                 &kp UP                                                                              &trans                      &trans                          
-	                        &m_print      &m_copy       &kp LEFT      &kp RIGHT                                                             &trans        &trans        &trans        &trans  
-	                              &m_paste                    &kp DOWN                                                                            &trans                      &trans                    
+                                  &m_paste                   &kp UP                                                                               &trans                      &trans                          
+	                        &m_print      &m_brefresh   &kp LEFT      &kp RIGHT                                                             &trans        &trans        &trans        &trans  
+	                              &m_copy                    &kp DOWN                                                                             &trans                      &trans                    
 
                                                                                           &kp V                       &kp P                                     
 	                                                                                &kp M         &kp K         &kp F         &kp H   
 	                                                                                      &kp C                       &kp D                        
 
-                                                                                          &tog MOU                    &kp X                                     
+                                                                                          &mt LGUI ESC                &kp X                                     
 	                                                                                &kp G         &kp W         &kp B         &key_repeat   
 	                                                                                      &kp Z                       &kp Q                        
             >;
@@ -310,9 +311,9 @@
             display-name = "Num";
 
 // -------______----------------_______-----------------_____-----------------______------------------_____---------------_____-------------______-----------------_____-------
-//       |     |               |   @   |               |  +  |               |   $  |       ||       |  1  |             |  5  |           |   9  |               | GUI |
-// |     |     | CAPSW |   | = |       | ` |       | ^ |     | ~ |       | & |      | * |   ||   | 1 |     | 2 |     | 8 |     | 6 |   | = |      | 0 |   | CAPSW |     |  |  
-//       | MSC |               |   !   |               |  %  |               |   #  |       ||       |  3  |             |  7  |           |   ?  |               | MSC |
+//       |     |               |   @   |               |  +  |               |   $  |       ||       |  1  |             |  5  |           |   9  |               |     |
+// |     |     | CAPSW |   | = |       | ` |       | ^ |     | ~ |       | & |      | * |   ||   | 1 |     | 2 |     | 8 |     | 6 |   | = |      | 0 |   | CAPSW |     |     |  
+//       |     |               |   !   |               |  %  |               |   #  |       ||       |  3  |             |  7  |           |   ?  |               |     |
 //                                                                                          ||
 //                             |       |               |     |                              ||                           |     |           |      |                      
 //                         |   |       |   |       |   |     |   |                          ||                       |   |     |   |   |   |      |   |                          
@@ -326,21 +327,21 @@
 //                                                                       | _ |      | - |   ||   | / |     | \ |                                                               
 //                                                                           |      |       ||       |     |                                                             
             bindings = <
-      &trans                      &kp AT                      &kp PLUS                    &kp DLLR                   &kp N1                       &kp N5                      &kp N9                      &kp LGUI           
+      &trans                      &kp AT                      &kp PLUS                    &kp DLLR                    &kp N1                      &kp N5                      &kp N9                      &trans           
 &trans        &s_cw         &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &kp STAR      &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &kp N0        &s_cw         &trans
-	  &mo MSC                     &kp EXCL                    &kp PRCNT                   &kp HASH                   &kp N3                       &kp N7                      &kp QMARK                   &mo MSC      
+	  &trans                      &kp EXCL                    &kp PRCNT                   &kp HASH                    &kp N3                      &kp N7                      &kp QMARK                   &trans      
 
                                   &trans                      &trans                                                                              &trans                      &trans                          
-	                        &trans        &m_copy       &trans        &trans                                                                &trans        &trans        &trans        &trans  
+	                        &trans        &trans        &trans        &trans                                                                &trans        &trans        &trans        &trans  
 	                              &trans                      &studio_unlock                                                                      &trans                      &trans                    
 
-                                                                                          &kp LT                     &kp LBKT                                     
+                                                                                          &kp LT                      &kp LBKT                                     
 	                                                                                &kp LBRC      &kp RBRC      &kp LPAR      &kp RPAR   
-	                                                                                      &kp GT                     &kp RBKT                        
+	                                                                                      &kp GT                      &kp RBKT                        
 
-                                                                                          &trans                     &kp PIPE                                     
+                                                                                          &trans                      &kp PIPE                                     
 	                                                                                &kp UNDER     &kp MINUS     &kp FSLH      &kp NUBS   
-	                                                                                      &trans                     &trans                        
+	                                                                                      &trans                      &trans                        
             >;
         };
 
@@ -362,22 +363,21 @@
 //                                                                           |      |       ||       |  |  |                                                             
 //                                                                       | _ |      | - |   ||   | / |     | \ |                                                               
 //                                                                           |      |       ||       |     |                                                             
-            bindings = <
-      &trans                      &kp AT                      &kp PLUS                    &kp DLLR                   &kp N1                       &kp N5                      &kp N9                      &kp LGUI           
-&trans        &s_cw         &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &kp STAR      &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &kp N0        &s_cw         &trans
-	  &trans                      &kp EXCL                    &kp PRCNT                   &kp HASH                   &kp N3                       &kp N7                      &kp QMARK                   &trans      
+            bindirans<
+      &trans                      &trans                      &trans                      &trans                      &trans                      &trans                      &trans                      &trans          
+&trans        &s_cw         &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+	  &trans                      &trans                      &trans                      &trans                      &trans                      &trans                      &trans                      &trans      
 
                                   &trans                      &trans                                                                              &trans                      &trans                          
-	                        &trans        &m_copy       &trans        &trans                                                                &trans        &trans        &trans        &trans  
-	                              &trans                      &trans                                                                              &trans                      &trans                    
+	                        &trans        &trans        &trans        &trans                                                                &trans        &trans        &trans        &trans  
+	                              &trans                      &trans                                                                              &trans                      &trans
+                                                                                          &trans                      &trans                                     
+	                                                                                &trans        &trans        &trans        &trans  
+	                                                                                      &trans                      &trans                        
 
-                                                                                          &kp LT                     &kp LBKT                                     
-	                                                                                &kp LBRC      &kp RBRC      &kp LPAR      &kp RPAR   
-	                                                                                      &kp GT                     &kp RBKT                       
-
-                                                                                          &trans                     &kp PIPE                                     
-	                                                                                &kp UNDER     &kp MINUS     &kp FSLH      &kp NUBS   
-	                                                                                      &trans                     &trans                        
+                                                                                          &trans                      &trans                                     
+	                                                                                &trans        &trans        &trans        &trans   
+	                                                                                      &trans                      &trans                        
             >;
         };
 
@@ -400,21 +400,21 @@
 //                                                                       | _ |      | - |   ||   | / |     | \ |                                                               
 //                                                                           |      |       ||       |     |                                                             
             bindings = <
-      &tog BAS                    &kp AT                      &kp PLUS                    &mkp LCLK                  &kp N1                       &kp N5                      &kp N9                      &tog BAS           
-&mo NUM       &kp LSHIFT    &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &mkp MCLK     &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &m_ctrlup     &kp LSHIFT    &mo NUM
-	  &mo MSC                     &kp EXCL                    &kp PRCNT                   &mkp RCLK                  &kp N3                       &kp N7                      &mkp MCLK                   &mo MSC      
+      &trans                      &trans                      &trans                      &trans                      &trans                      &trans                      &trans                      &trans          
+&trans        &s_cw         &trans        &trans        &trans        &trans        &mkp LCLK     &mkp RCLK     &trans        &trans        &trans        &trans        &trans        &trans        &s_cw         &trans
+	  &trans                      &trans                      &trans                      &mkp MCLK                   &trans                      &trans                      &trans                      &trans      
 
-                                  &m_zoom_in                  &trans                                                                              &trans                      &trans                          
-	                        &trans        &m_copy       &trans        &trans                                                                &trans        &trans        &trans        &trans  
-	                              &m_zoom_out                 &trans                                                                              &trans                      &trans                    
+                                  &trans                      &trans                                                                              &trans                      &trans                          
+	                        &trans        &trans        &trans        &trans                                                                &trans        &trans        &trans        &trans  
+	                              &trans                      &trans                                                                              &trans                      &trans                    
 
-                                                                                          &kp LT                     &mkp LCLK                                     
-	                                                                                &kp LBRC      &kp RBRC      &mkp RCLK     &mkp RCLK  
-	                                                                                      &kp GT                     &mkp LCLK                        
+                                                                                          &trans                      &mkp MCLK                                     
+	                                                                                &trans      &trans          &mkp LCLK     &mkp RCLK  
+	                                                                                      &trans                      &mkp MCLK                        
 
-                                                                                          &trans                     &kp LBKT                                     
-	                                                                                &kp UNDER     &kp MINUS     &kp LPAR      &kp RPAR   
-	                                                                                      &trans                     &kp RBKT                        
+                                                                                          &trans                      &m_zoom_in                                     
+	                                                                                &trans     &trans           &trans        &m_ctrlup   
+	                                                                                      &trans                      &m_zoom_out                        
             >;
         };
     };
