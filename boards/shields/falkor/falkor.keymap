@@ -88,22 +88,17 @@
         compatible = "zmk,input-listener";
         device = <&tball_split>;
         input-processors = <&zip_zxy>, <&xy_scaler 4 1>;
-        layer_move {
-            layers = <BAS>;
-            process-next;
-            input-processors = <&zip_temp_layer 3 2000>;
-        };
-        /* precise { */
-        /*     layers = <MSC>; */
-        /*     process-next; */
-        /*     input-processors = <&xy_scaler 1 3>; */
-        /* }; */
         scroll {
             layers = <NUM MSC>;
-            process-next;
             input-processors = <&xy_transf (INPUT_TRANSFORM_X_INVERT)>
                              , <&xy_scaler 1 45>
                              , <&to_wheel>;
+            process-next;
+        };
+        layer_move {
+            layers = <BAS>;
+            input-processors = <&zip_temp_layer 3 2000>;
+            process-next;
         };
     };
 
