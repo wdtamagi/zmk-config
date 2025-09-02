@@ -1,11 +1,13 @@
 #include "falkor.dtsi"
 #include "falkor_zplit.dtsi"
+#include "falkor_esb_addr.dtsi"
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
     chosen {
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &falkor_physical_layout;
+		zmk,battery = &vbatt;
     };
 
     mock_kscan: kscan_1 {
@@ -14,4 +16,11 @@
         rows = <0>;
         events = <0>;
     };
+
+	vbatt: vbatt {
+		compatible = "zmk,battery-voltage-divider";
+		io-channels = <&adc 2>;
+		output-ohms = <2000000>;
+		full-ohms = <(2000000 + 806000)>;
+	};
 };
