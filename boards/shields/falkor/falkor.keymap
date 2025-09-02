@@ -84,6 +84,7 @@
             63
         >;
     };
+
     tracball_mmv_il {
         compatible = "zmk,input-listener";
         device = <&tball_split>;
