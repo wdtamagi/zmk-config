@@ -4,8 +4,8 @@ manifest:
       url-base: https://github.com/wdtamagi
     - name: badjeff
       url-base: https://github.com/badjeff
-    - name: nrfconnect
-      url-base: https://github.com/nrfconnect
+    # - name: nrfconnect
+    #   url-base: https://github.com/nrfconnect
   projects:
     - name: zmk
       remote: wdtamagi
@@ -35,15 +35,17 @@ manifest:
     - name: zmk-dongle-screen
       remote: wdtamagi
       revision: main
-    - name: zmk-feature-split-esb
-      remote: badjeff
-      revision: main  
-    - name: sdk-nrf
-      remote: nrfconnect
-      path: nrf
-    - name: nrfxlib
-      remote: nrfconnect
-      repo-path: sdk-nrfxlib
-      path: nrfxlib
+    # - name: zmk-feature-split-esb
+    #   remote: badjeff
+    #   revision: main  
+    # - name: sdk-nrf
+    #   remote: nrfconnect
+    #   revision: v2.6.4 # zephyr v3.5.99
+    #   path: nrf
+    # - name: nrfxlib
+    #   remote: nrfconnect
+    #   revision: v2.6.4
+    #   repo-path: sdk-nrfxlib
+    #   path: nrfxlib
   self:
     path: config

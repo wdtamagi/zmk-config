@@ -1,7 +1,7 @@
 #include "falkor.dtsi"
 #include "falkor_nview.dtsi"
 #include "falkor_zplit.dtsi"
-#include "falkor_esb_addr.dtsi"
+/* #include "falkor_esb_addr.dtsi" */
 
 &kscan0 {
     compatible = "zmk,kscan-gpio-matrix";
@@ -14,16 +14,16 @@
         ;
 };
 
-/{
-	chosen {
-		zmk,battery = &vbatt;
-	};
-	vbatt: vbatt {
-		compatible = "zmk,battery-voltage-divider";
-		io-channels = <&adc 2>;
-		output-ohms = <2000000>;
-		full-ohms = <(2000000 + 806000)>;
-	};
-};
+/* /{ */
+/* 	chosen { */
+/* 		zmk,battery = &vbatt; */
+/* 	}; */
+/* 	vbatt: vbatt { */
+/* 		compatible = "zmk,battery-voltage-divider"; */
+/* 		io-channels = <&adc 2>; */
+/* 		output-ohms = <2000000>; */
+/* 		full-ohms = <(2000000 + 806000)>; */
+/* 	}; */
+/* }; */
 
 &tball_split { status = "disabled"; };
