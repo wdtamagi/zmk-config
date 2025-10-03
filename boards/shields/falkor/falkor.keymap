@@ -76,7 +76,7 @@
             27
             49
             52
-            52
+            53
             55
             57
             60
@@ -297,7 +297,7 @@
 	                                                                                &kp M         &kp K         &kp F         &kp H   
 	                                                                                      &kp C                       &kp D                        
 
-                                                                                          &mt LGUI ESC                &kp X                                     
+                                                                                          &trans                      &kp X                                     
 	                                                                                &kp G         &kp W         &kp B         &key_repeat   
 	                                                                                      &kp Z                       &kp Q                        
             >;
@@ -336,7 +336,7 @@
 	                                                                                      &kp GT                      &kp RBKT                        
 
                                                                                           &trans                      &kp PIPE                                     
-	                                                                                &kp UNDER     &kp MINUS     &kp FSLH      &kp NUBS   
+	                                                                                &kp UNDER     &kp MINUS     &kp FSLH      &kp BSLH   
 	                                                                                      &trans                      &trans                        
             >;
         };
@@ -360,7 +360,7 @@
 //                                                                       | _ |      | - |   ||   | / |     | \ |                                                               
 //                                                                           |      |       ||       |     |                                                             
             bindings = <
-      &trans                      &trans                      &trans                      &trans                      &trans                      &trans                      &trans                      &trans          
+      &trans                      &trans                      &trans                      &sys_reset                  &sys_reset                  &trans                      &trans                      &trans          
 &trans        &s_cw         &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 	  &trans                      &trans                      &trans                      &trans                      &trans                      &trans                      &trans                      &trans      
 
