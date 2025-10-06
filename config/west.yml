@@ -11,9 +11,9 @@ manifest:
       remote: wdtamagi
       revision: main
       import: app/west.yml
-    - name: nice-view-gem
-      remote: wdtamagi
-      revision: main
+    # - name: nice-view-gem
+    #   remote: wdtamagi
+    #   revision: main
     - name: zmk-pmw3610-driver
       remote: wdtamagi
       revision: main
