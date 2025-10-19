@@ -324,7 +324,7 @@
 //                                                                           |      |       ||       |     |                                                             
             bindings = <
       &trans                      &kp AT                      &kp PLUS                    &kp DLLR                    &kp N1                      &kp N5                      &kp N9                      &trans           
-&trans        &s_cw         &kp EQUAL     &kp GRAVE     &kp CARET     &kp I         &kp AMPS      &kp STAR      &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &kp N0        &s_cw         &trans
+&trans        &s_cw         &kp EQUAL     &kp GRAVE     &kp CARET     &kp TILDE     &kp AMPS      &kp STAR      &kp N4        &kp N2        &kp N8        &kp N6        &kp EQUAL     &kp N0        &s_cw         &trans
 	  &trans                      &kp EXCL                    &kp PRCNT                   &kp HASH                    &kp N3                      &kp N7                      &kp QMARK                   &trans      
 
                                   &trans                      &trans                                                                              &trans                      &trans                          
