@@ -24,3 +24,8 @@
 	/* 	full-ohms = <(2000000 + 806000)>; */
 	/* }; */
 };
+
+/* falkor.dtsi defines the halves' GPIO matrix. On the dongle it's unused but was
+ * still instantiated, claiming P1.00 (display reset) and P0.11 (ambient light
+ * sensor IRQ) used by the dongle screen. */
+&kscan0 { status = "disabled"; };
