@@ -287,7 +287,7 @@
             bindings = <
       &mt LGUI ESC                &kp LCTRL                   &kp DEL                     &kp BSPC                    &kp RET                     &kp TAB                     &kp LCTRL                   &mt RGUI ESC           
 &mo NUM       &s_cw         &kp COMMA     &kp APOS      &kp DOT       &kp I         &kp SPACE     &kp R         &kp A         &kp SPACE     &kp L         &kp J         &kp Y         &kp SEMI      &s_cw         &mo NUM
-	  &mo MSC                     &kp U                       &kp O                       &kp E                       &kp T                       &kp N                       &kp S                       &mo MSC      
+	  &mo MSC                     &kp U                       &kp O                       &kp E                       &kp T                       &kp N                       &kp S                       &kp RC(R)      
 
                                   &m_paste                   &kp UP                                                                               &trans                      &trans                          
 	                        &m_print      &m_brefresh   &kp LEFT      &kp RIGHT                                                             &trans        &trans        &trans        &trans  
