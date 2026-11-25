@@ -9,27 +9,27 @@
 # shield: [ "corne_left", "corne_right" ]
 # include:
 #   - board: bdn9_rev2
-#   - board: nice_nano_v2
+#   - board: nice_nano//zmk
 #     shield: reviung41
-#   - board: nice_nano_v2
+#   - board: nice_nano//zmk
 #     shield: corne_left
 #     cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
 #     artifact-name: corne_left_with_logging
 #
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: falkor_right
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
     artifact-name: falkor-right
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: falkor_left
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
     artifact-name: falkor-left
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: falkor_dongle dongle_screen
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: falkor-dongle
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: settings_reset

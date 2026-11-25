@@ -34,7 +34,7 @@ manifest:
       revision: main
     - name: zmk-dongle-screen
       remote: wdtamagi
-      revision: main
+      revision: upgrade-4.1 # Zephyr 4.1 branch, see janpfischer/zmk-dongle-screen#29
     # - name: zmk-feature-split-esb
     #   remote: badjeff
     #   revision: main  

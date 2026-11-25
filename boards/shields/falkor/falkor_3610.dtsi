@@ -21,9 +21,8 @@
 	compatible = "nordic,nrf-spim";
 	status = "disabled"; // <<< disabled in main .dtsi, okay in .overlay
 	tball: pd@0 {
-		compatible = "pixart,pmw3610";
+		compatible = "pixart,pmw3610-alt";
 		status = "disabled";
-		label = "TBALL";
 		reg = <0>;
 		spi-max-frequency = <4000000>;
 	};
@@ -47,5 +46,6 @@
 	evt-type = <INPUT_EV_REL>;
 	x-input-code = <INPUT_REL_X>;
 	y-input-code = <INPUT_REL_Y>;
+	invert-x;
 	force-awake;
 };
